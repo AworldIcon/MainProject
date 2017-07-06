@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/mainFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                tools:context="com.coder.kzxt.main.fragment.MainFragment">
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+        </ScrollView>
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+    <include layout="@layout/loading"/>
+    <include layout="@layout/load_fail"/>
+</RelativeLayout>

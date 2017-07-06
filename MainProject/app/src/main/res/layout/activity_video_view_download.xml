@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_view_download"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.coder.kzxt.download.VideoView_Download_Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/OverflowMenuStyle"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+
+    <com.coder.kzxt.views.ScrollHeaderListView
+        android:id="@+id/download_catalogue_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_fenge"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent" />
+
+    <View
+        android:id="@+id/bottom_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/selection_menu"
+        android:background="@color/gray_line"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/selection_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_44_dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/selection_all"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/select_all"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_16_dip" />
+        <View
+            android:id="@+id/fenges"
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_line"
+            />
+
+        <Button
+            android:id="@+id/selection_download"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/download"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_16_dip" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/select_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/selcet_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_marginLeft="@dimen/woying_8_dip"
+            >
+
+            <ImageView
+                android:id="@+id/select_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_6_dip"
+                />
+
+            <TextView
+                android:id="@+id/select_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_6_dip"
+                android:layout_toRightOf="@+id/select_img"
+                android:layout_toLeftOf="@+id/right_ly"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:duplicateParentState="true"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/font_white"
+                android:textSize="@dimen/woying_12_dip" />
+
+            <LinearLayout
+                android:id="@+id/right_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/isPublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_hui_360"
+                    android:paddingBottom="@dimen/woying_2_dip"
+                    android:paddingLeft="@dimen/woying_8_dip"
+                    android:paddingRight="@dimen/woying_8_dip"
+                    android:paddingTop="@dimen/woying_2_dip"
+                    android:text="@string/free"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_8_dip"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/inevitable_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/inevitable"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_notify_start"
+        android:layout_width="@dimen/woying_35_dip"
+        android:layout_height="@dimen/woying_35_dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="6.0dip"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/ll_one"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="@dimen/woying_2_dip"
+        android:layout_toRightOf="@id/iv_notify_start"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_2_dip">
+
+        <RelativeLayout
+            android:id="@+id/relaLayTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/iv_notify_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="68.0dip"
+                android:text="@string/update_version"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/font_black"
+                android:textSize="12.0sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayProcess"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13.0dip"
+            android:layout_marginTop="2.0dip"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/ProgressBarDown"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="10.0dip"
+                android:max="100"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayProcessStatus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.0dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_complete_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_complete"
+                android:textColor="#ff393939"
+                android:textSize="13.0sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_already_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_connect"
+                android:textColor="#ff393939"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@+id/tv_download_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.0dip"
+                android:text="@string/downloading"
+                android:textColor="#ff393939"
+                android:textSize="11.0sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

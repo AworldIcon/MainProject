@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange">
+
+    <RelativeLayout
+        android:id="@+id/group_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_5_dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/java_course"
+            android:textColor="@color/font_black"
+            android:textSize="15dip" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

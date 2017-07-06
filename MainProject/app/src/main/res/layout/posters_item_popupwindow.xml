@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="@dimen/woying_130_dip"
+        android:layout_height="wrap_content"
+        android:background="@color/first_theme"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/item_one_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_one_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:drawablePadding="@dimen/woying_10_dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_14_dip" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/fenge"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/item_two_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_two_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:drawablePadding="@dimen/woying_10_dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_14_dip" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/fenge1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/item_tr_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/item_tr_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:drawablePadding="@dimen/woying_10_dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_14_dip" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/rl_phone_email_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_45_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/phone_or_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_15_dip"
+            android:layout_marginRight="@dimen/woying_5_dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="@dimen/woying_12_dip" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/auth_code_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_45_dip"
+        android:layout_below="@id/rl_phone_email_info"
+        android:layout_marginTop="@dimen/woying_20_dip">
+
+        <EditText
+            android:id="@+id/et_auth_code"
+            android:layout_width="@dimen/woying_160_dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/woying_15_dip"
+            android:background="@drawable/round_gray2"
+            android:hint="@string/input_auth_code_hint"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/woying_10_dip"
+            android:textColorHint="@color/font_gray"
+            android:textSize="@dimen/woying_14_dip" />
+
+        <Button
+            android:id="@+id/get_autn_code_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/woying_100_dip"
+            android:layout_height="@dimen/woying_40_dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:background="@drawable/round_theme1"
+            android:text="@string/get_auth_code_again"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_12_dip" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/submit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_below="@id/auth_code_info"
+        android:layout_marginLeft="@dimen/woying_15_dip"
+        android:layout_marginRight="@dimen/woying_15_dip"
+        android:layout_marginTop="@dimen/woying_20_dip"
+        android:background="@drawable/round_huang3_loginsetting"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/woying_16_dip" />
+
+    <TextView
+        android:id="@+id/change_to_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/woying_20_dip"
+        android:text="@string/use_email_auth"
+        android:textColor="@color/first_theme"
+        android:textSize="@dimen/woying_13_dip"
+        android:visibility="gone" />
+</RelativeLayout>

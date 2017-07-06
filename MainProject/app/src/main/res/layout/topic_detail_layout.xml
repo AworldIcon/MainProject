@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_set_color">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.coder.kzxt.recyclerview.MyPullRecyclerView
+                android:id="@+id/myPullRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/header_layout"
+                android:layout_marginBottom="@dimen/woying_45_dip"
+                android:overScrollMode="always"
+                app:layoutManagerType="linear_vertical">
+
+            </com.coder.kzxt.recyclerview.MyPullRecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/public_reply_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_set_color">
+
+                <TextView
+                    android:id="@+id/et_reply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/woying_8_dip"
+                    android:background="@drawable/round_white_reply"
+                    android:hint="发表回复"
+                    android:padding="@dimen/woying_8_dip"
+                    android:textColorHint="@color/reply_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

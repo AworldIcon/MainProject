@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post_course_comment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.coder.kzxt.course.activity.PostCourseCommentActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_100_dip"
+        android:background="@color/bg_white"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+            <RatingBar
+                android:id="@+id/post_rat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/markRatingBar"
+                android:stepSize="1"
+                />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/woying_12_dip"
+                 android:textColor="@color/font_gray"
+                 android:text="轻触打分"
+                 android:layout_marginTop="@dimen/woying_10_dip"
+                 android:layout_gravity="center"
+                 />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/post_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_160_dip"
+        android:layout_marginTop="@dimen/woying_20_dip"
+        android:background="@color/bg_white"
+        android:hint="@string/input_comment_content_hint"
+        android:gravity="top|left"
+        android:paddingTop="@dimen/woying_20_dip"
+        android:paddingLeft="@dimen/woying_20_dip"
+        android:paddingRight="@dimen/woying_20_dip"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/woying_12_dip"
+        android:maxLength="200"
+        />
+
+       <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line"
+            >
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:background="@color/bg_white"
+            >
+
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="匿名"
+                android:textSize="@dimen/woying_12_dip"
+                android:textColor="@color/font_black"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                />
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="@dimen/woying_10_dip"
+                 >
+
+                 <TextView
+                     android:id="@+id/cu_number_tv"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textSize="@dimen/woying_10_dip"
+                     android:textColor="@color/font_gray"
+                     android:maxLength="200"
+                     android:text="0/"
+                     />
+
+                  <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textSize="@dimen/woying_10_dip"
+                     android:textColor="@color/font_gray" android:text="200"
+                     />
+
+             </LinearLayout>
+
+
+        </RelativeLayout>
+
+    <Button
+        android:id="@+id/post_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_38_dip"
+        android:layout_marginLeft="@dimen/woying_20_dip"
+        android:layout_marginRight="@dimen/woying_20_dip"
+        android:layout_marginTop="@dimen/woying_20_dip"
+        android:text="@string/submit"
+        android:background="@drawable/round_theme"
+        android:textColor="@color/white"
+        android:textSize="@dimen/woying_14_dip"
+        />
+
+
+
+</LinearLayout>

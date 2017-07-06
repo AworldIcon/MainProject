@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+
+    <LinearLayout
+        android:id="@+id/map_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/woying_250_dip"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/woying_20_dip"
+        android:background="@drawable/round_white">
+
+        <TextView
+            android:id="@+id/my_location"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/my_location"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            style="@style/grayVerticalLine"
+            android:layout_margin="@dimen/woying_4_dip"/>
+
+        <TextView
+            android:id="@+id/sign_location"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sign_location"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

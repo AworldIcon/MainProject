@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_layout"
+    android:background="@color/bg_set_color">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <RelativeLayout
+        android:id="@+id/setting_middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_set_color"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <!-- 用户头像 -->
+        <RelativeLayout
+            android:id="@+id/user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_50_dip"
+            android:background="@drawable/ripple_orange">
+
+            <TextView
+                android:id="@+id/tv_user_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginRight="@dimen/woying_3_dip"
+                android:layout_toLeftOf="@+id/iv_setting_user_photo"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/profile_icon"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_16_dip" />
+
+            <ImageView
+                android:id="@+id/iv_setting_user_photo"
+                android:layout_width="@dimen/woying_40_dip"
+                android:layout_height="@dimen/woying_40_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/login_default_icon"
+                android:layout_marginRight="@dimen/woying_40_dip" />
+
+            <ImageView
+                android:id="@+id/iv_setting_user_photo_jiantou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_15_dip"
+                android:src="@drawable/sliding_jiantou" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/iv_setting_line0_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/user_info_layout"
+            android:layout_marginLeft="@dimen/woying_15_dip"
+            android:background="@color/gray_line" />
+
+
+        <!-- 用户信息第1层 -->
+        <RelativeLayout
+            android:id="@+id/setting_middle_second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_setting_line0_arrow"
+            android:background="@color/bg_set_color">
+
+            <!-- 用户名 -->
+            <RelativeLayout
+                android:id="@+id/user_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/user_name"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_16_dip" />
+
+                <TextView
+                    android:id="@+id/nickname_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_3_dip"
+                    android:layout_marginRight="@dimen/woying_45_dip"
+                    android:layout_toRightOf="@id/tv_user_name"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:id="@+id/nickname_jiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_15_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+
+            <!-- line -->
+            <View
+                android:id="@+id/iv_setting_linestuid_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/user_name_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line" />
+
+            <!-- 地址 -->
+            <RelativeLayout
+                android:id="@+id/address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@drawable/ripple_orange"
+                android:layout_below="@id/iv_setting_linestuid_arrow">
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/my_address"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_16_dip" />
+
+                <TextView
+                    android:id="@+id/address_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_45_dip"
+                    android:background="@color/white"
+                    android:ellipsize="middle"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:id="@+id/iv_address_jiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_15_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+            <!-- line -->
+
+
+            <!-- 性别 -->
+            <RelativeLayout
+                android:id="@+id/setting_middle_second_version_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@drawable/ripple_orange"
+                android:layout_marginTop="@dimen/woying_15_dip"
+                android:layout_below="@+id/address_layout">
+
+                <TextView
+                    android:id="@+id/tv_setting_sex_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/sex"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_16_dip" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_40_dip"
+                    android:layout_toLeftOf="@+id/iv_setting_sex_jiantou"
+                    android:text="男"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_16_dip" />
+
+                <ImageView
+                    android:id="@+id/iv_setting_sex_jiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_15_dip"
+                    android:src="@drawable/sliding_jiantou" />
+
+                <RadioGroup
+                    android:id="@+id/rg_setting_sex_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_45_dip"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/rb_setting_sex_male"
+                        android:layout_width="@dimen/woying_50_dip"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/user_male"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/woying_5_dip"
+                        android:paddingRight="0dip"
+                        android:text="@string/male"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/woying_14_dip" />
+
+                    <RadioButton
+                        android:id="@+id/rb_setting_sex_female"
+                        android:layout_width="@dimen/woying_50_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/woying_30_dip"
+                        android:drawableLeft="@drawable/user_female"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/woying_5_dip"
+                        android:paddingRight="0dip"
+                        android:text="@string/female"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/woying_14_dip" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/iv_setting_line2_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/setting_middle_second_version_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line" />
+
+            <!-- 个人简介-->
+            <RelativeLayout
+                android:id="@+id/setting_signature_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@+id/iv_setting_line2_arrow"
+                android:background="@drawable/ripple_orange"
+               >
+
+                <TextView
+                    android:id="@+id/tv_setting_signature_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_profile"
+                    android:textColor="@color/font_black"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:textSize="@dimen/woying_16_dip" />
+
+                <TextView
+                    android:id="@+id/user_signature_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_40_dip"
+                    android:layout_marginLeft="@dimen/woying_100_dip"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:id="@+id/iv_setting_signature_jiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_15_dip"
+                    android:src="@drawable/sliding_jiantou" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/iv_setting_line3_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/setting_signature_layout"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

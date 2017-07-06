@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/pullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/pullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_layout"
+            android:background="@color/bg_gray"
+            app:layoutManagerType="linear_vertical"
+            />
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+
+    <include layout="@layout/empty_view"/>
+
+</RelativeLayout>

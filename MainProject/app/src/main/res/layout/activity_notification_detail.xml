@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white"
+                android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+<ScrollView
+    android:id="@+id/data_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/notificationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/woying_10_dip"
+            android:layout_marginLeft="@dimen/woying_14_dip"
+            android:layout_marginRight="@dimen/woying_14_dip"
+            android:layout_marginTop="@dimen/woying_14_dip"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_16_dip"/>
+
+        <TextView
+            android:id="@+id/sendName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notificationName"
+            android:layout_marginLeft="@dimen/woying_14_dip"
+            android:layout_marginStart="@dimen/woying_14_dip"
+            android:textColor="@color/font_light_gray"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <TextView
+            android:id="@+id/sendTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notificationName"
+            android:layout_marginLeft="@dimen/woying_14_dip"
+            android:layout_marginStart="@dimen/woying_14_dip"
+            android:layout_toEndOf="@id/sendName"
+            android:layout_toRightOf="@id/sendName"
+            android:textColor="@color/font_light_gray"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <LinearLayout
+            android:id="@+id/notificationNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sendName"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_14_dip"
+                android:layout_marginStart="@dimen/woying_14_dip"
+                android:text="已读:"
+                android:textColor="@color/font_light_gray"
+                android:textSize="@dimen/font_normal"
+                />
+
+            <TextView
+                android:id="@+id/readNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginStart="@dimen/woying_4_dip"
+                android:text="10"
+                android:textColor="@color/font_light_gray"
+                android:textSize="@dimen/font_normal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/font_light_gray"
+                android:textSize="@dimen/font_normal"
+                />
+
+            <TextView
+                android:id="@+id/unReadNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/font_light_gray"
+                android:textSize="@dimen/font_normal"
+                />
+            <TextView
+                android:id="@+id/check_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看详情"
+                android:textColor="@color/first_theme"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:textSize="@dimen/font_normal"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/grayLine"
+            style="@style/grayHorizontallLine"
+            android:layout_below="@id/notificationNumber"
+            android:layout_marginTop="@dimen/woying_14_dip"/>
+
+        <TextView
+            android:id="@+id/notificationContent"
+            style="@style/font_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/grayLine"
+            android:padding="@dimen/woying_14_dip"
+            />
+    </RelativeLayout>
+</ScrollView>
+    <include layout="@layout/load_fail"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+    <include layout="@layout/loading"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+</RelativeLayout>

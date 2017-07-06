@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/item_gambit_adapter"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dip"
+            android:background="@color/gray_line"/>
+
+        <include layout="@layout/gambit_hover_tab"/>
+    </LinearLayout>
+
+</LinearLayout>

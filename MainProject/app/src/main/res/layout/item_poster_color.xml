@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:background="@color/white" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/woying_20_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_20_dip">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="@dimen/woying_50_dip"
+            />
+
+        <ImageView
+            android:id="@+id/selectImage"
+            android:layout_width="@dimen/woying_20_dip"
+            android:layout_height="@dimen/woying_20_dip"
+            android:layout_gravity="center"
+            android:src="@drawable/poster_color_select"
+            />
+    </FrameLayout>
+
+</LinearLayout>

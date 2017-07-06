@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/woying_40_dip"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_14_dip"
+        android:layout_marginRight="@dimen/woying_14_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        />
+
+
+    <ImageView
+        android:id="@+id/no_disturb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_35_dip"
+        android:src="@drawable/no_disturb"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/unReadNum"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="@dimen/woying_44_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"
+        android:gravity="center"
+        android:minWidth="16dp"
+        android:textColor="@color/font_white"
+        android:textSize="10sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/courseName"
+        style="@style/font_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imageView"
+        android:layout_marginTop="@dimen/woying_2_dip"
+        android:layout_toEndOf="@id/imageView"
+        android:layout_toRightOf="@id/imageView"
+        />
+
+    <TextView
+        android:id="@+id/className"
+        style="@style/font_gray_mini_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/woying_2_dip"
+        android:layout_marginEnd="@dimen/woying_14_dip"
+        android:layout_marginRight="@dimen/woying_14_dip"
+        />
+
+    <TextView
+        android:id="@+id/messageContent"
+        style="@style/font_gray_small_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/className"
+        android:layout_toLeftOf="@+id/className"
+        android:layout_toRightOf="@id/imageView"
+        />
+
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/font_gray_mini_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/courseName"
+        android:layout_marginEnd="@dimen/woying_14_dip"
+        android:layout_marginRight="@dimen/woying_14_dip"
+        />
+
+
+</RelativeLayout>

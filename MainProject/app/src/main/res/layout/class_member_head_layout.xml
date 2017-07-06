@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/class_member_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+
+    <ImageView
+        android:id="@+id/menumber_head_img"
+        android:layout_width="@dimen/woying_25_dip"
+        android:layout_height="@dimen/woying_25_dip"
+        android:layout_marginTop="@dimen/woying_5_dip"
+        android:layout_marginBottom="@dimen/woying_5_dip"
+        android:src="@drawable/default_me_myimg" />
+
+</RelativeLayout>

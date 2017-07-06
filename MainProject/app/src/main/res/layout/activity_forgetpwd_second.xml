@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/woying_30_dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_phone_email_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_60_dip">
+
+            <TextView
+                android:id="@+id/phone_email_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/woying_5_dip"
+                android:layout_marginTop="@dimen/woying_5_dip"
+                android:text="@string/authcode_send_to"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip" />
+
+            <TextView
+                android:id="@+id/phone_or_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_email_info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/woying_5_dip"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginRight="@dimen/woying_15_dip"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_16_dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/auth_code_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_50_dip"
+            android:layout_below="@id/rl_phone_email_info"
+            android:layout_marginTop="@dimen/woying_20_dip">
+
+            <EditText
+                android:id="@+id/et_auth_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginRight="@dimen/woying_15_dip"
+                android:background="@null"
+                android:hint="@string/input_auth_code_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/woying_1_dip"
+                android:textColor="@color/font_black"
+                android:textColorHint="@color/font_gray"
+                android:textSize="@dimen/woying_14_dip" />
+
+            <Button
+                android:id="@+id/get_autn_code_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/woying_110_dip"
+                android:layout_height="@dimen/woying_35_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_15_dip"
+                android:background="@drawable/round_setdynamic"
+                android:text="@string/get_auth_code_again"
+                android:textColor="@color/first_theme"
+                android:textSize="@dimen/woying_12_dip" />
+
+            <View
+                android:id="@+id/fenge"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/get_autn_code_button"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginRight="@dimen/woying_15_dip"
+                android:layout_marginTop="@dimen/woying_3_dip"
+                android:background="@color/first_theme" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/submit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:layout_below="@id/auth_code_info"
+            android:layout_marginLeft="@dimen/woying_15_dip"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:layout_marginTop="@dimen/woying_20_dip"
+            android:background="@drawable/round_huang3_loginsetting"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_16_dip" />
+
+        <TextView
+            android:id="@+id/change_to_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/woying_20_dip"
+            android:text="@string/use_email_auth"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_13_dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

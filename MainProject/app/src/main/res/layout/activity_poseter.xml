@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/my_layout"
+                android:background="@color/background_gray"
+                android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <LinearLayout
+        android:id="@+id/searchLy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="@dimen/woying_6_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_6_dip"
+        android:background="@drawable/round_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_6_dip">
+
+        <TextView
+            style="@style/font_gray_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/search_gray"
+            android:drawablePadding="@dimen/woying_10_dip"
+            android:gravity="center_vertical"
+            android:text="@string/search"
+            tools:ignore="RtlHardcoded"/>
+    </LinearLayout>
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myStagePullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchLy"
+        >
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myStagePullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/woying_5_dip"
+            app:layoutManagerType="staggered_grid_layout"
+            app:spanCount="2"
+            />
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchLy"
+        android:visibility="gone">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManagerType="linear_vertical"
+            />
+
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <LinearLayout
+        android:id="@+id/typeLy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+         android:background="@drawable/back_black_transparent"
+        android:visibility="gone">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/typeGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layoutManagerType="grid_layout"
+            app:spanCount="3">
+        </com.coder.kzxt.recyclerview.MyPullRecyclerView>
+    </LinearLayout>
+
+
+
+    <include layout="@layout/loading"></include>
+
+</RelativeLayout>

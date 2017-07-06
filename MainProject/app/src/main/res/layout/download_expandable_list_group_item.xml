@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/group_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_fenge"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/chapter_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip" />
+
+        <View
+            android:id="@+id/bottom_fenge"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray_line" />
+
+    </LinearLayout>
+
+</LinearLayout>

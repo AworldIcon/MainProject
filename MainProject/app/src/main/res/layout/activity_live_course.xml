@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_live_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.coder.kzxt.course.activity.LiveCourseActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="10dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:navigationIcon="@drawable/back_up"
+            app:navigationIcon="@drawable/back_up"
+            app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+            app:theme="@style/Toolbar"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/mtablyout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/first_theme"
+            app:tabIndicatorColor="@color/bg_tablayout_line"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/font_white"
+            app:tabTextColor="@color/font_white_tablayout_unselect"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_appbar"
+         />
+
+
+</RelativeLayout>

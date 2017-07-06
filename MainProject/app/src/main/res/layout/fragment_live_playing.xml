@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/mainView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    >
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ExpandableListView
+            android:id="@+id/my_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_layout"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:groupIndicator="@null"
+            android:listSelector="@color/transparent"
+            >
+        </ExpandableListView>
+
+
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <!--<include layout="@layout/loading" />-->
+    <include layout="@layout/load_fail"/>
+    <include layout="@layout/empty_view"/>
+
+</RelativeLayout>

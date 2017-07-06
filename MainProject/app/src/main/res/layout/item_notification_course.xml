@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/bg_white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/woying_4_dip"
+        android:paddingBottom="@dimen/woying_4_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_3_dip"
+        android:layout_marginBottom="@dimen/woying_3_dip">
+        <CheckBox
+            android:id="@+id/choice_image"
+            android:layout_width="@dimen/woying_18_dip"
+            android:layout_height="@dimen/woying_18_dip"
+            android:button="@null"
+            android:gravity="center_vertical"
+            android:background="@drawable/select_detemin"/>
+        <TextView
+            android:id="@+id/class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/choice_image"
+            android:layout_marginLeft="@dimen/woying_7_dip"
+            android:text="123456"
+            android:textSize="@dimen/woying_14_dip"
+            android:textColor="@color/font_black"
+            android:layout_centerVertical="true"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/group_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/department_go"
+            />
+    </RelativeLayout>
+</LinearLayout>

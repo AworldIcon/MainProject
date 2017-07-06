@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/ripple_orange"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="@dimen/woying_46_dip"
+        android:layout_height="@dimen/woying_46_dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/default_me_myimg"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/font_normal_small_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_6_dip"
+        android:layout_marginBottom="@dimen/woying_16_dip"
+        android:layout_below="@+id/head"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="@dimen/woying_50_dip"
+        android:gravity="center" />
+
+
+</RelativeLayout>

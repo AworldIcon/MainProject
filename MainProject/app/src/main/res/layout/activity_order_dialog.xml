@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/woying_5_dip"
+    >
+
+    <RelativeLayout
+        android:id="@+id/select_class_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_180_dip"
+        android:background="@drawable/round_white"
+        android:layout_centerInParent="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_list_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_5_dip"
+            android:layout_marginRight="@dimen/woying_5_dip"
+            android:padding="@dimen/woying_10_dip">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_class_close" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选择授课班"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_1_dip"
+            android:layout_below="@+id/rl_list_top"
+            android:background="@color/bg_gray" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:overScrollMode="never"
+            android:layout_marginLeft="@dimen/woying_5_dip"
+            android:layout_marginRight="@dimen/woying_5_dip" />
+    </RelativeLayout>
+</RelativeLayout>

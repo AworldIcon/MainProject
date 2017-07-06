@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/main_search"
+        android:title="搜索"/>
+    <item
+        android:id="@+id/menu_download"
+        android:icon="@drawable/main_down"
+        android:title="下载"/>
+    <item
+        android:id="@+id/menu_message"
+        android:icon="@drawable/message"
+        android:title="消息"/>
+
+</menu>

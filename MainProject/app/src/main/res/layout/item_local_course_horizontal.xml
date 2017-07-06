@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/ripple_orange"
+              android:orientation="horizontal"
+              android:padding="@dimen/woying_10_dip">
+    <LinearLayout
+    android:id="@+id/course_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/courseImg"
+            style="@style/image_horizontal_large"
+            android:src="@drawable/my_course_def"/>
+
+        <ImageView
+            android:id="@+id/coursePriceStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/courseImg"/>
+
+        <include
+            layout="@layout/view_item_course_live_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/courseImg"
+            android:layout_alignLeft="@id/courseImg"
+            android:layout_alignRight="@id/courseImg"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        >
+
+
+        <TextView
+            android:id="@+id/courseName"
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_alignParentTop="true"
+            android:text="12313"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/woying_4_dip"
+            android:layout_alignParentEnd="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/lessonNum"
+                    style="@style/font_gray_small_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/class_time_small"
+                    android:drawablePadding="@dimen/woying_4_dip"
+                    android:text="123131313"
+                    />
+                <TextView
+                    android:id="@+id/source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:textSize="@dimen/woying_12_dip"
+                    android:textColor="@color/font_gray"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone"
+                    android:text="13213"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/studentNumber"
+                style="@style/font_gray_small_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/live_num_iv"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:text="12315646"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/famous_tea_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+            <ImageView
+                android:id="@+id/tea_face"
+                android:layout_width="@dimen/woying_50_dip"
+                android:layout_height="@dimen/woying_50_dip"
+                android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/woying_5_dip"
+            android:layout_toRightOf="@+id/tea_face"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/tea_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip"
+                />
+            <TextView
+                android:id="@+id/tea_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLength="15"
+                android:layout_marginTop="@dimen/woying_6_dip"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/woying_3_dip"
+            android:src="@drawable/department_go"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

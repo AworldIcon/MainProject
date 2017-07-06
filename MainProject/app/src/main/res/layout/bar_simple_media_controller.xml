@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp" 
+    android:background="@color/trans_black"
+	>
+
+    <ImageButton 
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/toggle_btn_play"
+		/>
+	<TextView 
+	    android:id="@+id/tv_position"
+	    android:layout_width="45dp"
+	    android:layout_height="40dp"
+	    android:layout_centerVertical="true"
+	    android:layout_toRightOf="@+id/btn_play"
+	    android:gravity="center"
+	    android:text="00:00:00"
+	    android:layout_marginLeft="5dp"
+	    android:singleLine="true"
+	    android:textSize="10dp"
+	    android:textColor="@color/font_white"/>
+	
+	<TextView
+		android:id="@+id/drag_tx"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/woying_12_dip"
+		android:textColor="@color/font_white"
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		android:text="@string/drag"
+		android:visibility="gone"
+		/>
+
+	<SeekBar 
+	    android:id="@+id/seekbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/tv_position"
+	    android:layout_toLeftOf="@+id/right_ly"
+	    android:layout_centerVertical="true"
+	    android:progressDrawable="@drawable/seekbar_holo_light"
+	    android:thumb="@drawable/seekbar_ratio"
+	    android:minHeight="3dp"
+	    android:maxHeight="3dp"
+	    android:paddingLeft="8dp"
+	    android:paddingRight="8dp"
+	    />
+
+	<LinearLayout
+		android:id="@+id/right_ly"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		>
+		<TextView
+			android:id="@+id/tv_duration"
+			android:layout_width="45dp"
+			android:layout_height="40dp"
+			android:layout_centerVertical="true"
+			android:gravity="center"
+			android:text="00:00:00"
+			android:layout_marginRight="5dp"
+			android:singleLine="true"
+			android:textSize="10dp"
+			android:layout_toLeftOf="@+id/screen_hv"
+			android:textColor="@color/font_white"/>
+
+		<ImageButton
+			android:id="@+id/screen_hv"
+			android:layout_width="wrap_content"
+			android:gravity="center"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10dp"
+			android:layout_gravity="center_vertical"
+			android:background="@drawable/enlarge_screen"
+			/>
+	</LinearLayout>
+
+</RelativeLayout>

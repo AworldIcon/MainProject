@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_setting1"
+        android:title="123456"
+        android:icon="@drawable/gambit_menu_top"
+        android:orderInCategory="10"
+        app:showAsAction="withText"
+        />
+    <item android:id="@+id/action_setting2"
+        android:title="123456"
+        android:icon="@drawable/gambit_menu_ess"
+        android:orderInCategory="50"
+        app:showAsAction="withText"
+        />
+    <item android:id="@+id/action_setting3"
+        android:title="123456"
+        android:orderInCategory="60"
+        android:icon="@drawable/question_del"
+        app:showAsAction="withText"
+        />
+</menu>

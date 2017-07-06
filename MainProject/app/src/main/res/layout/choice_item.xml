@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/option_zong_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/pitchon_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="20dip">
+
+            <ImageView
+                android:id="@+id/pitchon_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_radio_button_checkoff" />
+
+            <ImageView
+                android:id="@+id/pitchon_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_radio_button_checkon"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/option_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="20dip"
+            android:layout_toRightOf="@+id/pitchon_ly"
+            android:text="@string/choice_a"
+            android:textColor="@color/font_black"
+            android:textSize="14dip" />
+
+        <LinearLayout
+            android:id="@+id/list_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/option_tx"
+            android:orientation="horizontal"
+            android:paddingBottom="12dip"
+            android:paddingTop="12dip">
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1546544sssssssssssssss"
+                android:layout_marginRight="@dimen/woying_3_dip"
+                android:layout_marginLeft="@dimen/woying_2_dip"
+                android:layout_marginTop="@dimen/woying_8_dip"
+                android:textSize="@dimen/woying_12_dip"
+                android:textColor="@color/font_black"/>
+            <ListView
+                android:id="@+id/option_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:groupIndicator="@null"
+                android:listSelector="@color/transparent"
+                android:visibility="gone"
+                android:scrollbars="none">
+
+            </ListView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.coder.kzxt.views.SelfLayout
+        android:id="@+id/video_rlPlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </com.coder.kzxt.views.SelfLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true">
+
+            <include layout="@layout/video_play_title_tools" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/video_play_tools" />
+        </RelativeLayout>
+        <!--选集-->
+        <ImageView
+            android:id="@+id/selectImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_6_dip"
+            android:clickable="true"
+            android:src="@drawable/select_episode_img" />
+
+        <RelativeLayout
+            android:id="@+id/selects_layout"
+            android:layout_width="@dimen/woying_240_dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/video_controller_select_bg"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/selects_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/woying_4_dip"
+                android:scrollbars="none"
+                android:divider="@null"
+                android:background="@color/transparent"
+                android:listSelector="@color/transparent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buffer_progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/baifenbi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_10_dip"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/buffer_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@anim/paly_loading" />
+    </RelativeLayout>
+
+</RelativeLayout>

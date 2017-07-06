@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/img_layout"
+        android:layout_width="@dimen/woying_50_dip"
+        android:layout_height="@dimen/woying_50_dip">
+
+        <ImageView
+            android:id="@+id/item_grida_image"
+            android:layout_width="@dimen/woying_30_dip"
+            android:layout_height="@dimen/woying_30_dip"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/woying_15_dip"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/dele_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dele_question_photo"
+            android:layout_marginRight="@dimen/woying_1_dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

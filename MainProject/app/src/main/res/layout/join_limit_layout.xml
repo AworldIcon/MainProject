@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <RelativeLayout
+        android:id="@+id/check_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_1_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/needed_check"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_check_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_15_dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/allow_join_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_1_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allow_join"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_allow_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_15_dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/banned_from_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_1_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/joinin_ban"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_banned_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_15_dip" />
+    </RelativeLayout>
+</LinearLayout>

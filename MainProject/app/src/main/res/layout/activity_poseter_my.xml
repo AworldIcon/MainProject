@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="10dp">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_44_dip"
+        android:background="@color/first_theme">
+
+        <ImageView
+            android:id="@+id/leftImage"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="@dimen/woying_44_dip"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back_up"/>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_centerInParent="true"
+            app:tabMode="fixed"
+            android:background="@color/first_theme"
+            app:tabIndicatorColor="@color/bg_tablayout_line"
+            app:tabSelectedTextColor="@color/font_white"
+            app:tabTextColor="@color/font_white_tablayout_unselect"
+            />
+
+        <ImageView
+            android:id="@+id/rightImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_10_dip"/>
+    </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_appbar"/>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+
+    <LinearLayout
+        android:id="@+id/chat_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/woying_4_dip"
+        android:layout_marginLeft="@dimen/woying_6_dip"
+        android:layout_marginRight="@dimen/woying_6_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"
+        >
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_white"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:textSize="@dimen/woying_14_dip" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/searchhistory_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/search_history"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/woying_16_dip" />
+
+    <ImageView
+        android:id="@+id/searchhistory_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:background="@drawable/search_delete" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_line" />
+
+</RelativeLayout>

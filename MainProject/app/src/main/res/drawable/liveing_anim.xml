@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:variablePadding="true"
+    android:oneshot="false" >
+
+    <item android:duration="100">
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/liveing1"
+            android:gravity="left" >
+        </clip>
+    </item>
+
+
+    <item android:duration="100">
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/liveing2"
+            android:gravity="left" >
+        </clip>
+    </item>
+
+
+
+    <item android:duration="100">
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/liveing3"
+            android:gravity="left" >
+        </clip>
+    </item>
+
+
+    <item android:duration="100">
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/liveing4"
+            android:gravity="left" >
+        </clip>
+    </item>
+
+
+
+    <item android:duration="100">
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/liveing5"
+            android:gravity="left" >
+        </clip>
+    </item>
+
+</animation-list>

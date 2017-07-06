@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/essence_stick_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray">
+
+        <RelativeLayout
+            android:id="@+id/essence_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/woying_10_dip"
+            android:layout_marginLeft="@dimen/woying_30_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_essence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_essence"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:text="@string/make_best" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/stick_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/woying_10_dip"
+            android:layout_marginLeft="@dimen/woying_30_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:layout_toRightOf="@+id/essence_layout"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_stick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_stick"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:text="@string/make_first" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/cancle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/essence_layout"
+            android:background="@color/bg_white">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/woying_10_dip"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

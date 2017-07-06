@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liveTitleLy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/woying_4_dip"
+    android:visibility="gone">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/woying_4_dip"
+        android:layout_marginRight="@dimen/woying_4_dip"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/liveing_anim" />
+
+    <TextView
+        android:id="@+id/liveTitle"
+        style="@style/font_white_mini_single"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在直播：高级网络编程" />
+</LinearLayout>

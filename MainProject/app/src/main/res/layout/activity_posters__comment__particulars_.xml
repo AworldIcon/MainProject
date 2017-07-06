@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coder.kzxt.views.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_posters__comment__particulars_"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    tools:context="com.coder.kzxt.poster.activity.Posters_Comment_Particulars_Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/OverflowMenuStyle"
+        app:theme="@style/Toolbar"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_ly"
+        android:layout_height="match_parent">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManagerType="linear_vertical"
+            />
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <include layout="@layout/loading"></include>
+    <include layout="@layout/load_fail"></include>
+
+    <RelativeLayout
+        android:id="@+id/bottom_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_48_dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:id="@+id/comment_ed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_38_dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_20_dip"
+            android:layout_toLeftOf="@+id/post_button"
+            android:background="@drawable/round_white"
+            android:hint="@string/input_comment_hint"
+            android:paddingLeft="@dimen/woying_10_dip"
+            android:paddingRight="@dimen/woying_2_dip"
+            android:singleLine="true"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_14_dip" />
+
+        <TextView
+            android:id="@+id/post_button"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="@dimen/woying_30_dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:background="@drawable/round_huang3_loginsetting"
+            android:gravity="center"
+            android:text="@string/button_send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_14_dip" />
+
+    </RelativeLayout>
+
+</com.coder.kzxt.views.ResizeLayout>

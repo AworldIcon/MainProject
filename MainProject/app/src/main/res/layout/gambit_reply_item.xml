@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/reply_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_55_dip"
+        android:layout_marginRight="@dimen/woying_8_dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/reply_tex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_12_dip" />
+
+    </LinearLayout>
+
+</LinearLayout>

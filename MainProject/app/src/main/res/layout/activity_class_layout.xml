@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mToolBar">
+
+        <com.coder.kzxt.views.MyScrollview
+            android:id="@+id/scollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/include_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_set_color"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_top_course"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/woying_10_dip"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_top_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip" />
+                    </RelativeLayout>
+
+                    <com.coder.kzxt.recyclerview.MyPullRecyclerView
+                        android:id="@+id/top_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:layoutManagerType="linear_vertical" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/top_layout"
+                    android:background="@color/bg_white" />
+
+                <LinearLayout
+                    android:id="@+id/bottom_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/line"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/include_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_set_color"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_bottom_course"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/woying_10_dip"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_bottom_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip" />
+                    </RelativeLayout>
+
+                    <com.coder.kzxt.recyclerview.MyPullRecyclerView
+                        android:id="@+id/bottom_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:layoutManagerType="linear_vertical" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </com.coder.kzxt.views.MyScrollview>
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myPullSwipeRefresh" />
+
+    <include
+        layout="@layout/load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myPullSwipeRefresh" />
+
+    <include
+        layout="@layout/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myPullSwipeRefresh" />
+</RelativeLayout>

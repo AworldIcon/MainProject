@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_new_address"
+            android:divider="@color/gray_line"
+            android:dividerHeight="1dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_new_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_white"
+            android:gravity="center"
+            android:padding="@dimen/woying_10_dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:text="@string/new_address"
+                android:textColor="@color/first_theme"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

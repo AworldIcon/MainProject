@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_16_dip">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/courseImg1"
+                style="@style/image_big_vertical2"
+                android:src="@drawable/my_course_def" />
+
+            <ImageView
+                android:id="@+id/coursePriceStatus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/courseImg1" />
+
+            <LinearLayout
+                android:id="@+id/liveTitleLy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/courseImg1"
+                android:layout_alignLeft="@id/courseImg1"
+                android:layout_alignRight="@id/courseImg1"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/woying_4_dip"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progress1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/woying_2_dip"
+                    android:layout_marginRight="@dimen/woying_2_dip"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/liveing_anim" />
+
+                <TextView
+                    android:id="@+id/liveTitle1"
+                    style="@style/font_white_small_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在直播：高级网络编程" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/courseName1"
+            style="@style/font_normal_single"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:gravity="center_vertical"
+            android:text="" />
+
+
+        <LinearLayout
+            android:id="@+id/bottomLy1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_2_dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/courseTeacher1"
+                style="@style/font_gray_small_single"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="讲师：大点的" />
+
+
+            <TextView
+                android:id="@+id/personNum1"
+                style="@style/font_gray_small_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/department_down_gray"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:text="12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_16_dip">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/courseImg2"
+                style="@style/image_vertical_style"
+                android:src="@drawable/my_course_def" />
+
+            <ImageView
+                android:id="@+id/coursePriceStatus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/courseImg2" />
+
+            <LinearLayout
+                android:id="@+id/liveTitleLy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/courseImg2"
+                android:layout_alignLeft="@id/courseImg2"
+                android:layout_alignRight="@id/courseImg2"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/woying_4_dip"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progress2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/woying_2_dip"
+                    android:layout_marginRight="@dimen/woying_2_dip"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/liveing_anim" />
+
+                <TextView
+                    android:id="@+id/liveTitle2"
+                    style="@style/font_white_small_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在直播：高级网络编程" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/courseName2"
+            style="@style/font_normal_single"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:gravity="center_vertical"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/bottomLy2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_2_dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/courseTeacher2"
+                style="@style/font_gray_small_single"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="讲师：大点的" />
+
+
+            <TextView
+                android:id="@+id/personNum2"
+                style="@style/font_gray_small_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/department_down_gray"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:text="12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/layout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_16_dip">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/courseImg3"
+                style="@style/image_vertical_style"
+                android:src="@drawable/my_course_def" />
+
+            <ImageView
+                android:id="@+id/coursePriceStatus3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/courseImg3" />
+
+            <LinearLayout
+                android:id="@+id/liveTitleLy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/courseImg3"
+                android:layout_alignLeft="@id/courseImg3"
+                android:layout_alignRight="@id/courseImg3"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/woying_4_dip"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progress3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/woying_2_dip"
+                    android:layout_marginRight="@dimen/woying_2_dip"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/liveing_anim" />
+
+                <TextView
+                    android:id="@+id/liveTitle3"
+                    style="@style/font_white_small_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在直播：高级网络编程" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/courseName3"
+            style="@style/font_normal_single"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:gravity="center_vertical"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/bottomLy3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_2_dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/courseTeacher3"
+                style="@style/font_gray_small_single"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="讲师：大点的" />
+
+
+            <TextView
+                android:id="@+id/personNum3"
+                style="@style/font_gray_small_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/department_down_gray"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:text="12" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

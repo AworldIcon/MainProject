@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/class_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_20_dip"
+        android:layout_marginTop="@dimen/woying_10_dip">
+
+        <ImageView
+            android:id="@+id/class_icon"
+            android:layout_width="@dimen/woying_35_dip"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_common_header" />
+
+        <TextView
+            android:id="@+id/tv_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/class_icon"
+            android:paddingLeft="@dimen/woying_20_dip"
+            android:text="高校云技术部"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_class_person"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/tv_class_name"-->
+            <!--android:paddingLeft="@dimen/woying_10_dip"-->
+            <!--android:text="人"-->
+            <!--android:textColor="@color/oder_user_color"-->
+            <!--android:textSize="16sp" />-->
+    </RelativeLayout>
+
+</RelativeLayout>

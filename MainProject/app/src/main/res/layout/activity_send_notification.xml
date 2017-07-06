@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainView"
+                android:background="@color/bg_white"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_20_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:layout_marginRight="@dimen/woying_6_dip"
+            android:text="@string/vertical_line"
+            android:textColor="@color/font_light_gray"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <com.coder.kzxt.buildwork.views.ContainsEmojiEditText
+            android:id="@+id/titleEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip"
+            android:hint="@string/input_add_title"
+            android:padding="@dimen/woying_4_dip"
+            android:maxLength="16"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/grayLine"
+        style="@style/grayHorizontallLine"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"/>
+
+<RelativeLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/woying_110_dip"
+    android:layout_below="@id/grayLine"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:layout_marginRight="@dimen/woying_6_dip"
+            android:text="@string/vertical_line"
+            android:textColor="@color/font_light_gray"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <com.coder.kzxt.buildwork.views.ContainsEmojiEditText
+            android:id="@+id/contentEdit"
+            style="@style/font_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_100_dip"
+            android:background="@color/white"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip"
+            android:hint="@string/input_add_content"
+            android:padding="@dimen/woying_4_dip"
+            android:maxLength="100"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/woying_2_dip"
+        android:layout_marginRight="@dimen/woying_6_dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cu_number_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_num"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fenge"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip" />
+
+        <TextView
+            android:id="@+id/all_number_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+    <View
+        android:id="@+id/grayLine2"
+        style="@style/grayHorizontallLine"
+        android:layout_below="@id/linearLayout2"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"/>
+
+    <TextView
+        android:id="@+id/receive_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/grayLine2"
+        android:drawableRight="@drawable/browser_dilan_go_down"
+        android:padding="@dimen/woying_10_dip"
+        android:text="@string/receive_people"/>
+
+    <View
+        android:id="@+id/grayLine3"
+        style="@style/grayHorizontallLine"
+        android:layout_below="@id/receive_people"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"/>
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@+id/grayLine3">
+    <ListView
+        android:id="@+id/class_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        />
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/woying_12_dip"
+        android:layout_marginTop="@dimen/woying_5_dip"
+        android:text="*注意事项:通知发送后,因接收人员的数量不同，收到的信息的时间会有所不同,人数越多,通知发送的时间及越慢!"/>
+</LinearLayout>
+
+</RelativeLayout>

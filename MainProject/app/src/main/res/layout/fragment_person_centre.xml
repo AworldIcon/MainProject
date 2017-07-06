@@ -1,0 +1,773 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.main.fragment.PersonCentreFragment">
+
+    <ScrollView
+        android:id="@+id/me_scroll_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:id="@+id/scroll_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/user_img_loginregistion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_200_dip"
+                android:background="@color/bg_white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_130_dip"
+                    android:background="@drawable/bg"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/user_img_picture_nologin"
+                    android:layout_width="@dimen/woying_64_dip"
+                    android:layout_height="@dimen/woying_64_dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/woying_100_dip"
+                    android:background="@drawable/default_me_myimg" />
+
+                <TextView
+                    android:id="@+id/me_my_loginId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_img_picture_nologin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/woying_10_dip"
+                    android:layout_marginTop="@dimen/woying_6_dip"
+                    android:text="@string/click_login"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_12_dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/user_img_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_180_dip"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/user_img_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_130_dip"
+                    android:background="@drawable/bg"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/woying_90_dip"
+                    android:paddingLeft="@dimen/woying_10_dip"
+                    android:paddingRight="@dimen/woying_10_dip">
+
+                    <ImageView
+                        android:id="@+id/user_img_picture_bg"
+                        android:layout_width="@dimen/woying_70_dip"
+                        android:layout_height="@dimen/woying_70_dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_head_bg" />
+
+                    <ImageView
+                        android:id="@+id/user_img_picture"
+                        android:layout_width="@dimen/woying_64_dip"
+                        android:layout_height="@dimen/woying_64_dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/woying_3_dip"
+                        android:background="@drawable/default_me_myimg" />
+
+                    <TextView
+                        android:id="@+id/user_img_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_img_picture"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/woying_2_dip"
+                        android:duplicateParentState="true"
+                        android:singleLine="true"
+                        android:text="@string/myname"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/woying_12_dip" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/user_my_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_order_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ripple_orange"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/order_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_15_dip"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/me_myorder" />
+
+                        <TextView
+                            android:id="@+id/me_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/order_down_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_10_dip"
+                            android:duplicateParentState="true"
+                            android:paddingBottom="@dimen/woying_15_dip"
+                            android:text="@string/order"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_down_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_orange"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/sliding_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_15_dip"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/me_mydownlaod" />
+
+                        <TextView
+                            android:id="@+id/sliding_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sliding_down_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_10_dip"
+                            android:text="@string/download"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_collection_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_orange"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/collection_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_15_dip"
+                            android:src="@drawable/me_mycollection" />
+
+                        <TextView
+                            android:id="@+id/collection_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/collection_down_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_10_dip"
+                            android:text="@string/favorite"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_practice_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_orange"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/practice_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_15_dip"
+                            android:src="@drawable/me_mypractice" />
+
+                        <TextView
+                            android:id="@+id/practice_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/practice_down_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_10_dip"
+                            android:text="@string/work"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_exam_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_orange"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/exam_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myexam" />
+
+                        <TextView
+                            android:id="@+id/exam_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/exam_down_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_10_dip"
+                            android:text="@string/exam"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_questions_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_orange"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/sliding_questions_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_15_dip"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/me_myquestion" />
+
+                        <TextView
+                            android:id="@+id/sliding_questions_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sliding_questions_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/woying_10_dip"
+                            android:duplicateParentState="true"
+                            android:paddingBottom="@dimen/woying_15_dip"
+                            android:text="@string/questions"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sliding_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="@dimen/woying_20_dip"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_teaching_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/sliding_teaching_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myteaching" />
+
+                        <TextView
+                            android:id="@+id/sliding_teaching_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/sliding_teaching_img"
+                            android:text="@string/my_tea_coruse"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/teaching_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_course_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/sliding_course_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_mycourse" />
+
+                        <TextView
+                            android:id="@+id/sliding_course_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/sliding_course_img"
+                            android:text="@string/my_coruse"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/course_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_class_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/class_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myclass" />
+
+                        <TextView
+                            android:id="@+id/class_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/class_down_img"
+                            android:text="@string/my_class"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/class_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_service_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/service_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myservice" />
+
+                        <TextView
+                            android:id="@+id/service_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@id/service_down_img"
+                            android:text="@string/my_service"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/service_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_wallet_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/wallet_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_mywallet" />
+
+                        <TextView
+                            android:id="@+id/wallet_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@id/wallet_down_img"
+                            android:text="@string/my_wallet"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/wallet_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_posters_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/posters_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myposters" />
+
+                        <TextView
+                            android:id="@+id/me_posters"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/posters_down_text"
+                            android:text="@string/my_posters"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/posters_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_gambit_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/gambit_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_mygambit" />
+
+                        <TextView
+                            android:id="@+id/me_gambit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/gambit_down_text"
+                            android:text="@string/my_gambits"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/gambit_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_feedback_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/feedback_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myfeedback" />
+
+                        <TextView
+                            android:id="@+id/feedback_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/feedback_down_img"
+                            android:text="@string/opinion"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/feedback_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_about_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/about_down_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:src="@drawable/me_myabout" />
+
+                        <TextView
+                            android:id="@+id/about_down_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/about_down_img"
+                            android:text="@string/about_we"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/about_down_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/sliding_my_down_fenge"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/woying_40_dip"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/sliding_my_set_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_40_dip"
+                        android:background="@drawable/ripple_orange"
+                        >
+
+                        <ImageView
+                            android:id="@+id/sliding_set_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_15_dip"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/me_myset" />
+
+                        <TextView
+                            android:id="@+id/sliding_set_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:layout_toRightOf="@+id/sliding_set_img"
+                            android:duplicateParentState="true"
+                            android:text="@string/sets"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/woying_14_dip" />
+
+                        <ImageView
+                            android:id="@+id/sliding_set_jiantou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/woying_20_dip"
+                            android:src="@drawable/sliding_jiantou" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/gray_line" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

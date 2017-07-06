@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ripple_orange"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_6_dip"
+        android:background="@color/bg_gray"/>
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_5_dip"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/woying_12_dip"
+        android:layout_marginBottom="@dimen/woying_12_dip"
+        >
+        <ImageView
+            android:id="@+id/unhead_Img"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="@dimen/woying_50_dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_me_myimg" />
+        <TextView
+            android:id="@+id/unfinish_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_12_dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/woying_3_dip"
+            />
+    </LinearLayout>
+</LinearLayout>

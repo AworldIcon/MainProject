@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/courseName"
+        style="@style/font_normal_single"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_6_dip"
+        android:gravity="center_vertical"
+        android:text="课程名称" />
+
+    <LinearLayout
+        android:id="@+id/bottomLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_2_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/courseTeacher"
+            style="@style/font_gray_small_single"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="老师" />
+
+
+        <TextView
+            android:id="@+id/personNum"
+            style="@style/font_gray_small_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/woying_4_dip"
+            android:drawableRight="@drawable/department_down_gray"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</LinearLayout>

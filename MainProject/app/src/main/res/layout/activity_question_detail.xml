@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/OverflowMenuStyle"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            app:layoutManagerType="linear_vertical"
+            />
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+
+    <RelativeLayout
+        android:id="@+id/answer_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/first_theme"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/answer_question"
+            android:drawablePadding="@dimen/woying_4_dip"
+            android:text="@string/im_answer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_14_dip"/>
+    </RelativeLayout>
+
+</RelativeLayout>

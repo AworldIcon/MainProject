@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg"
+    tools:context="com.coder.kzxt.main.activity.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/wel_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/welcome_bg"/>
+    <TextView
+        android:id="@+id/goto_app"
+        android:layout_width="@dimen/woying_50_dip"
+        android:layout_height="@dimen/woying_30_dip"
+        android:layout_alignRight="@+id/wel_ad"
+        android:layout_alignTop="@+id/wel_ad"
+        android:layout_marginTop="@dimen/woying_14_dip"
+        android:layout_marginRight="@dimen/woying_18_dip"
+        android:background="@drawable/wel_ad_corner_bg"
+        android:visibility="gone"
+        android:text="@string/jump_ad"
+        android:gravity="center"
+        android:clickable="true"
+        android:textSize="@dimen/woying_16_dip"
+        android:textColor="@color/font_white"/>
+
+
+</RelativeLayout>

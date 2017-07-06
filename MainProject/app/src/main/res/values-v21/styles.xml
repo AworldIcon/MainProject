@@ -1,0 +1,27 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme for API 21+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 21+ devices.
+    -->
+
+    <style name="AppTheme.Toolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/first_theme</item>
+        <item name="colorPrimaryDark">@color/first_theme</item>
+        <item name="colorAccent">@color/first_theme</item>
+        <item name="android:listDivider">@drawable/divider</item>
+        <item name="android:colorControlNormal">@color/first_theme</item>
+        <item name="android:colorControlActivated">@color/first_theme</item>
+    </style>
+
+
+
+    <style name="custom_dialog" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorAccent">@color/first_theme</item>
+        <item name="android:textColorPrimary">@color/font_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

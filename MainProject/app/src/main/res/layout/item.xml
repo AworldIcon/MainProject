@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingLeft="@dimen/woying_20_dip"
+    android:paddingTop="@dimen/woying_4_dip"
+    android:paddingBottom="@dimen/woying_4_dip"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_radio_button_checkon"/>
+<TextView
+    android:id="@+id/item_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/woying_12_dip"
+    android:layout_marginLeft="@dimen/woying_5_dip"
+    android:text="123156"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:textColor="@color/font_gray"/>
+</LinearLayout>

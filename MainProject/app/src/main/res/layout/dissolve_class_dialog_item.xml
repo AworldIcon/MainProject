@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/woying_30_dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/woying_5_dip"
+            android:background="@drawable/round_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/create_class_provider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/woying_12_dip"
+                android:textColor="@color/font_gray"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/dissolve_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_1_dip"
+                android:background="@color/bg_gray" />
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/woying_12_dip"
+                android:text="@string/btn_sure"
+                android:textColor="@color/font_red"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/woying_12_dip"
+            android:text="@string/cancel"
+            android:textColor="@color/first_theme"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

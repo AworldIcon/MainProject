@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+               android:background="@drawable/ripple_orange"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/all_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip"
+        >
+
+        <RelativeLayout
+            android:layout_width="1px"
+            android:layout_height="@dimen/woying_90_dip"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/course_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/my_course_def"
+                />
+
+            <LinearLayout
+                android:id="@+id/live_sta_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_18_dip"
+                android:background="@color/trans_half"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                >
+
+            <ProgressBar
+                android:id="@+id/liveProgress"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                android:layout_marginRight="@dimen/woying_4_dip"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@drawable/liveing_anim"
+                />
+
+                <TextView
+                    android:id="@+id/liveTitle"
+                    style="@style/font_white_mini_single"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  "
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/live_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip"
+                />
+
+
+            <TextView
+                android:id="@+id/host_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:layout_weight="1"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/tab_search_live_group_bottom_item"
+        >
+    </include>
+
+</LinearLayout>

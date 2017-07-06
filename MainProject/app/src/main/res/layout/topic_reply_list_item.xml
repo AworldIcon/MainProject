@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white">
+
+    <RelativeLayout
+        android:id="@+id/topic_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:background="@color/bg_white">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/woying_35_dip"
+            android:layout_height="@dimen/woying_35_dip"
+            android:src="@drawable/class_cirlce_comment_icon" />
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_head"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="@string/profile_nickname"
+            android:textColor="@color/oder_user_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nick_name"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_8_dip"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="时间"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_head_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_time"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="@string/delete"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_head"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:layout_toRightOf="@+id/iv_head">
+
+            <TextView
+                android:id="@+id/tv_head_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:text="我是头部的回复内容"
+                android:textColor="@color/bg_black"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <com.coder.kzxt.views.MyGridView
+            android:id="@+id/imge_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_reply"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_toRightOf="@+id/iv_head"
+            android:cacheColorHint="@color/transparent"
+            android:childDivider="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:horizontalSpacing="@dimen/woying_5_dip"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/woying_5_dip" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/topic_reply_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_head_layout"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_1_dip"
+            android:layout_marginLeft="@dimen/woying_55_dip"
+            android:background="@color/bg_gray" />
+
+        <com.coder.kzxt.views.MyListView
+            android:id="@+id/myListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/bg_white"
+            android:divider="@null"
+            android:listSelector="@color/bg_white" />
+
+        <TextView
+            android:id="@+id/tv_more_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myListView"
+            android:layout_marginBottom="@dimen/woying_5_dip"
+            android:layout_marginLeft="@dimen/woying_55_dip"
+            android:layout_marginTop="@dimen/woying_3_dip"
+            android:text="还有1条回复"
+            android:textColor="@color/first_theme"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

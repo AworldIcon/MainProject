@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/enroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/first_theme"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/cancel"
+                android:textColor="@color/font_white"
+                android:textSize="@dimen/woying_14_dip" />
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/btn_sure"
+                android:textColor="@color/font_white"
+                android:textSize="@dimen/woying_14_dip" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/enrollment_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.coder.kzxt.wheel.widget.WheelView
+                android:id="@+id/enro_wheelview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

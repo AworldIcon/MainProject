@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_dis"
+    tools:context="com.coder.kzxt.main.fragment.DiscoveryFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray">
+
+        <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+            android:id="@+id/myPullSwipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.coder.kzxt.recyclerview.MyPullRecyclerView
+                android:id="@+id/myPullRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:divider_decoration_width="10"/>
+        </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+    </RelativeLayout>
+    <include layout="@layout/loading" />
+    <include layout="@layout/load_fail"/>
+    <include layout="@layout/empty_view"/>
+</FrameLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+               xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_orange"
+    >
+
+    <RelativeLayout
+        android:id="@+id/zong_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <ImageView
+        android:id="@+id/live_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_190_dip"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/round_eight"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_2_dip"
+            android:paddingLeft="@dimen/woying_4_dip"
+            android:text="直播中"
+            android:textColor="@color/font_red"
+            android:textSize="@dimen/woying_10_dip"
+            />
+
+        <TextView
+            android:id="@+id/live_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_2_dip"
+            android:paddingBottom="@dimen/woying_2_dip"
+            android:paddingLeft="@dimen/woying_4_dip"
+            android:paddingRight="@dimen/woying_30_dip"
+            android:text="10人观看"
+            android:textColor="@color/font_white"
+            android:textSize="@dimen/woying_10_dip"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/live_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/woying_20_dip"
+        android:layout_marginLeft="@dimen/woying_20_dip"
+        android:layout_marginRight="@dimen/woying_20_dip"
+        android:background="@drawable/back_black_transparent"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/woying_4_dip"
+            android:paddingLeft="@dimen/woying_10_dip"
+            android:paddingRight="@dimen/woying_10_dip"
+            android:paddingTop="@dimen/woying_4_dip"
+            >
+
+            <ImageView
+                android:id="@+id/host_head_iv"
+                android:layout_width="@dimen/woying_30_dip"
+                android:layout_height="@dimen/woying_30_dip"
+                android:scaleType="fitXY"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_6_dip"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/live_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/font_white"
+                    android:textSize="@dimen/woying_10_dip"
+                    />
+
+                <TextView
+                    android:id="@+id/host_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/font_white"
+                    android:textSize="@dimen/woying_10_dip"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+  <View
+      android:id="@+id/line_v"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/woying_6_dip"
+      android:layout_below="@+id/zong_ly"
+      android:background="@color/bg_gray"></View>
+
+</RelativeLayout>

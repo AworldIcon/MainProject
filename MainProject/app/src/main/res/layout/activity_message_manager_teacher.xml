@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    <LinearLayout
+        android:id="@+id/qr_code_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/className"
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/about"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qr_code"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:src="@drawable/browser_dilan_go_down"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stop_talk_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qr_code_ly"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/stop_talk"/>
+
+
+        <Switch
+            android:id="@+id/talk_switch"
+            style="@style/mySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notify_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop_talk_ly"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip"
+        >
+
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/message_not_notify"/>
+
+
+        <Switch
+            android:id="@+id/notify_switch"
+            style="@style/mySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/class_qrcode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:layout_below="@id/notify_ly"
+        android:layout_marginTop="@dimen/woying_1_dip"
+        android:visibility="gone"
+        android:padding="@dimen/woying_10_dip"
+       >
+        <TextView
+            android:id="@+id/tv_class_qcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/font_normal"
+            android:text="@string/class_qcode"/>
+         <ImageView
+             android:id="@+id/jiantou"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:src="@drawable/sliding_jiantou"/>
+    </RelativeLayout>
+
+    <com.coder.kzxt.recyclerview.MyRecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        android:layout_below="@+id/class_qrcode_layout"
+        android:layout_marginTop="@dimen/woying_10_dip"/>
+
+</RelativeLayout>

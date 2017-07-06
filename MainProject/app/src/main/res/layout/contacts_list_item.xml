@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:paddingBottom="2dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="2dip"
+        android:text="A"
+        android:textColor="#454545" />
+
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_5_dip"
+        android:layout_marginBottom="@dimen/woying_5_dip"
+        android:background="@drawable/item_click">
+
+        <ImageView
+            android:id="@+id/iv_user_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:src="@drawable/default_common_header" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/iv_user_head"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="10dip"
+            android:text="hhhh"
+            android:textColor="@color/font_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:visibility="gone"
+            android:textColor="@color/font_gray"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

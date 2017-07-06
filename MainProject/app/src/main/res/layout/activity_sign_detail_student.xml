@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_gray"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:background="@drawable/round_white"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_normal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text="@string/course_name"/>
+
+                    <TextView
+                        android:id="@+id/courseName"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_normal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text="@string/begin_time"/>
+
+                    <TextView
+                        android:id="@+id/sign_start_time"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_normal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text="@string/end_time"/>
+
+                    <TextView
+                        android:id="@+id/sign_end_time"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_normal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text="@string/sign_time_length"/>
+
+                    <TextView
+                        android:id="@+id/sign_time_length"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_normal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text="@string/sign_range"/>
+
+                    <TextView
+                        android:id="@+id/sign_range"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/font_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text="@string/sign_location"/>
+
+                    <TextView
+                        android:id="@+id/sign_location"
+                        style="@style/font_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="@dimen/woying_10_dip"
+                        android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recordLy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/font_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="———当前签到信息———"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:background="@drawable/round_white"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/teacher"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/woying_10_dip"
+                        android:paddingTop="@dimen/woying_10_dip"
+                        />
+
+                    <TextView
+                        android:id="@+id/record_status"
+                        style="@style/font_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/woying_10_dip"
+                        android:textSize="@dimen/font_big"
+                        android:visibility="gone"/>
+
+                    <View
+                        style="@style/grayHorizontallLine"
+                        android:layout_marginTop="@dimen/woying_10_dip"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/woying_10_dip"
+                        android:textColor="@color/first_theme"
+                        android:textSize="@dimen/font_big"/>
+
+                    <com.coder.kzxt.recyclerview.MyRecyclerView
+                        android:id="@+id/myRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/woying_10_dip"
+                        android:paddingLeft="@dimen/woying_10_dip"
+                        android:paddingRight="@dimen/woying_10_dip"
+                        app:layoutManagerType="grid_layout"
+                        app:spanCount="5"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="———最初签到信息———"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_white"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/info_status"
+                    style="@style/font_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/woying_10_dip"
+                    android:text=""
+                    android:textSize="@dimen/font_big"/>
+
+                <TextView
+                    android:id="@+id/info_status_mark"
+                    style="@style/font_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/info_status"
+                    android:layout_toRightOf="@+id/info_status"
+                    android:text=""
+                    android:paddingBottom="@dimen/woying_10_dip"/>
+
+                <TextView
+                    android:id="@+id/info_sign_time_title"
+                    style="@style/font_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_status"
+                    android:paddingBottom="@dimen/woying_10_dip"
+                    android:paddingLeft="@dimen/woying_10_dip"
+                    android:text="@string/sign_time_student"/>
+
+                <TextView
+                    android:id="@+id/info_sign_time"
+                    style="@style/font_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/info_sign_time_title"
+                    android:paddingLeft="@dimen/woying_10_dip"
+                    android:paddingRight="@dimen/woying_10_dip"
+                    android:text=""/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

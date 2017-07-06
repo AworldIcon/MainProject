@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/text_link_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         layout="@layout/titlebar_default"/>
+
+    <ProgressBar
+        android:id="@+id/pb_web_url"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_2_dip"
+        android:layout_below="@+id/text_link_title_layout"
+        android:progressDrawable="@drawable/barcolor"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textSize="16sp"/>
+    <WebView
+        android:id="@+id/mywebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="software"
+        android:layout_below="@+id/pb_web_url"
+        />
+    <include layout="@layout/load_fail" />
+</RelativeLayout>

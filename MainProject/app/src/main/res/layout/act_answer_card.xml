@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <include layout="@layout/titlebar_default"
+        android:id="@+id/titlebar"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_white"
+            android:layout_below="@+id/titlebar"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginBottom="@dimen/woying_50_dip"
+            >
+
+            <ListView
+                android:id="@+id/mainList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:divider="@null"
+                android:listSelector="@null"
+                android:scrollbars="none" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_white"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/woying_14_dip"
+                    android:layout_height="@dimen/woying_14_dip"
+                    android:layout_marginRight="@dimen/woying_6_dip"
+                    android:src="@drawable/card_unanswer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:gravity="center_vertical"
+                    android:text="未答"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <ImageView
+                    android:layout_width="@dimen/woying_14_dip"
+                    android:layout_height="@dimen/woying_14_dip"
+                    android:layout_marginRight="@dimen/woying_6_dip"
+                    android:src="@drawable/card_answer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:gravity="center_vertical"
+                    android:text="@string/finish"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <ImageView
+                    android:layout_width="@dimen/woying_14_dip"
+                    android:layout_height="@dimen/woying_14_dip"
+                    android:layout_marginRight="@dimen/woying_6_dip"
+                    android:src="@drawable/card_tag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/tag"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/woying_10_dip"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/commit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_theme"
+                android:gravity="center"
+                android:paddingBottom="@dimen/woying_6_dip"
+                android:paddingLeft="@dimen/woying_26_dip"
+                android:paddingRight="@dimen/woying_26_dip"
+                android:paddingTop="@dimen/woying_6_dip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_14_dip" />
+        </LinearLayout>
+</RelativeLayout>

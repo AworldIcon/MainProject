@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:paddingBottom="@dimen/woying_10_dip"
+        >
+
+        <ImageView
+            android:id="@+id/course_img"
+            style="@style/image_horizontal_large"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip"
+                android:text="计算机科学与技术"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                >
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    style="@style/roomRatingBar"
+                    />
+
+                <TextView
+                    android:id="@+id/ratingbar_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/woying_10_dip"
+                    android:textColor="@color/font_yew"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    />
+
+                <TextView
+                    android:id="@+id/study_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥297"
+                android:textColor="@color/font_yew"
+                android:textSize="@dimen/woying_14_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/bg_gray"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/woying_14_dip"
+        android:textColor="@color/font_black"
+        android:layout_marginTop="@dimen/woying_12_dip"
+        android:text="@string/course_tea"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        >
+
+        <LinearLayout
+            android:id="@+id/teacher_ly1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/teacher_img1"
+                android:layout_width="@dimen/woying_45_dip"
+                android:layout_height="@dimen/woying_45_dip"
+                android:src="@drawable/course_default"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                >
+                <TextView
+                    android:id="@+id/teacher_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是多少"
+                    android:textSize="@dimen/woying_12_dip"
+                    android:textColor="@color/font_black"
+                    />
+                <TextView
+                    android:id="@+id/teacher_shool1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京大学"
+                    android:textSize="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray"
+                    android:layout_marginTop="@dimen/woying_2_dip"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/teacher_ly2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/teacher_img2"
+                android:layout_width="@dimen/woying_45_dip"
+                android:layout_height="@dimen/woying_45_dip"
+                android:src="@drawable/course_default"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                >
+                <TextView
+                    android:id="@+id/teacher_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是多少"
+                    android:textSize="@dimen/woying_12_dip"
+                    android:textColor="@color/font_black"
+                    />
+                <TextView
+                    android:id="@+id/teacher_shool2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京大学"
+                    android:textSize="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray"
+                    android:layout_marginTop="@dimen/woying_2_dip"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/teacher_ly3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/teacher_img3"
+                android:layout_width="@dimen/woying_45_dip"
+                android:layout_height="@dimen/woying_45_dip"
+                android:src="@drawable/course_default"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                >
+                <TextView
+                    android:id="@+id/teacher_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是多少"
+                    android:textSize="@dimen/woying_12_dip"
+                    android:textColor="@color/font_black"
+                    />
+                <TextView
+                    android:id="@+id/teacher_shool3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京大学"
+                    android:textSize="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray"
+                    android:layout_marginTop="@dimen/woying_2_dip"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:background="@color/gray_line"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="课程介绍"
+        android:textSize="@dimen/woying_14_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:textColor="@color/font_black"
+        />
+
+
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandableTextView:maxCollapsedLines="3"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        >
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="15"
+            android:textSize="@dimen/woying_12_dip"
+            android:ellipsize="end"
+            android:textColor="@color/font_gray"
+            />
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="right|bottom"
+            android:background="@android:color/transparent"/>
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray_line"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/comment_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        >
+
+        <TextView
+            android:id="@+id/comment_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="学员评论(0)"
+            android:textSize="@dimen/woying_14_dip"
+            android:textColor="@color/font_black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/woying_12_dip"
+            android:textColor="@color/first_theme"
+            android:layout_centerVertical="true"
+            android:text="去评论"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

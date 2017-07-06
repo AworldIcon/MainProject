@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/my_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include layout="@layout/view_search_edit_layout"/>
+
+        <ExpandableListView
+            android:id="@+id/my_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:childIndicator="@color/gray_line"
+            android:groupIndicator="@null"
+            android:listSelector="@color/transparent"
+            android:layout_below="@+id/searchLy"
+            android:visibility="gone"
+            >
+        </ExpandableListView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchLy"
+        android:background="@drawable/back_black_transparent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/woying_20_dip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/search_history"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_13_dip"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_line"/>
+
+
+                <com.coder.kzxt.recyclerview.MyRecyclerView
+                    android:id="@+id/history_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:groupIndicator="@null"
+                    android:scrollbars="none"
+                    app:layoutManagerType="linear_vertical">
+                </com.coder.kzxt.recyclerview.MyRecyclerView>
+
+            <TextView
+                android:id="@+id/clear_history"
+                android:layout_width="@dimen/woying_150_dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray_solid"
+                android:gravity="center"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/clean_history"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_13_dip"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/view_load_netfail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchLy"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/qr_code_ly"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/scan_code_sign"/>
+
+    <ImageView
+        android:id="@+id/codeImage"
+        android:layout_width="@dimen/woying_200_dip"
+        android:layout_height="@dimen/woying_200_dip"
+        android:layout_marginTop="@dimen/woying_20_dip"/>
+
+</LinearLayout>

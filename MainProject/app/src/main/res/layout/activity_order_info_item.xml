@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/woying_10_dip"
+        android:background="@drawable/round_white"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/woying_10_dip">
+
+            <ImageView
+                android:id="@+id/iv_close_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_class_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="订单信息"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_1_dip"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_order_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip">
+
+                <TextView
+                    android:id="@+id/order_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:text="订单状态"
+                    android:textColor="@color/sign_font_black" />
+
+                <TextView
+                    android:id="@+id/tv_order_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_order_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip">
+
+                <TextView
+                    android:id="@+id/order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:text="订单编号"
+                    android:textColor="@color/sign_font_black" />
+
+                <TextView
+                    android:id="@+id/tv_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_create_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip">
+
+                <TextView
+                    android:id="@+id/create_order_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:text="下单时间"
+                    android:textColor="@color/sign_font_black" />
+
+                <TextView
+                    android:id="@+id/tv_create_order_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pay_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip">
+
+                <TextView
+                    android:id="@+id/pay_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:text="支付方式"
+                    android:textColor="@color/sign_font_black" />
+
+                <TextView
+                    android:id="@+id/tv_pay_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/method_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pay_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip">
+
+                <TextView
+                    android:id="@+id/pay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:text="支付时间"
+                    android:textColor="@color/sign_font_black" />
+
+                <TextView
+                    android:id="@+id/tv_pay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:textColor="@color/font_gray" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/pay_time_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@color/bg_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_copy_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/woying_20_dip"
+            android:layout_marginTop="@dimen/woying_20_dip"
+            android:background="@drawable/round_theme1"
+            android:paddingBottom="@dimen/woying_8_dip"
+            android:paddingLeft="@dimen/woying_90_dip"
+            android:paddingRight="@dimen/woying_90_dip"
+            android:paddingTop="@dimen/woying_8_dip"
+            android:text="@string/copy_order_number"
+            android:textColor="@color/first_theme" />
+    </LinearLayout>
+</RelativeLayout>

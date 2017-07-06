@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchLy"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar"
+    android:layout_marginBottom="@dimen/woying_6_dip"
+    android:layout_marginLeft="@dimen/woying_10_dip"
+    android:layout_marginRight="@dimen/woying_10_dip"
+    android:layout_marginTop="@dimen/woying_6_dip"
+    android:background="@drawable/round_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/woying_6_dip">
+
+    <TextView
+        style="@style/font_gray_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search_gray"
+        android:drawablePadding="@dimen/woying_10_dip"
+        android:gravity="center_vertical"
+        android:text="@string/search"/>
+</LinearLayout>

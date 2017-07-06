@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/posters_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/woying_10_dip">
+
+        <ImageView
+            android:id="@+id/user_head_img"
+            android:layout_width="@dimen/woying_35_dip"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:layout_marginRight="@dimen/woying_6_dip"
+            android:layout_marginTop="@dimen/woying_10_dip" />
+
+        <LinearLayout
+            android:id="@+id/posters_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:layout_marginRight="@dimen/woying_6_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:layout_toRightOf="@+id/user_head_img"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/posters_user_inf_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <TextView
+                    android:id="@+id/user_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_name"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:text="@string/one_minute_ago"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_8_dip" />
+
+                <ImageView
+                    android:id="@+id/iuser_name_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:layout_toRightOf="@+id/user_name" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/posters_content_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:lineSpacingExtra="@dimen/woying_1_dip"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip" />
+
+            <LinearLayout
+                android:id="@+id/pra_rep_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/woying_14_dip"
+                android:layout_marginTop="@dimen/woying_2_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/praise_num_tx"
+                    android:layout_width="@dimen/woying_50_dip"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/praise"
+                    android:drawablePadding="@dimen/woying_2_dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="6dip"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <TextView
+                    android:id="@+id/replay_num_tx"
+                    android:layout_width="@dimen/woying_50_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:drawableLeft="@drawable/posters_reply"
+                    android:drawablePadding="@dimen/woying_2_dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="6dip"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/woying_100_dip"
+            android:layout_marginTop="@dimen/woying_68_dip"
+            android:gravity="center_vertical"
+            android:text="@string/add_one"
+            android:textColor="@color/font_red"
+            android:textSize="@dimen/woying_10_dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line" />
+
+    <RelativeLayout
+        android:id="@+id/like_pe_num_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip">
+
+        <LinearLayout
+            android:id="@+id/like_num_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/appraise_left" />
+
+            <TextView
+                android:id="@+id/likeNum"
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/num_five" />
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/appraise_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/like_num_ly"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/like0_img"
+                android:layout_width="@dimen/woying_35_dip"
+                android:layout_height="@dimen/woying_35_dip" />
+
+            <ImageView
+                android:id="@+id/like1_img"
+                android:layout_width="@dimen/woying_35_dip"
+                android:layout_height="@dimen/woying_35_dip"
+                android:layout_marginLeft="@dimen/woying_6_dip" />
+
+            <ImageView
+                android:id="@+id/like2_img"
+                android:layout_width="@dimen/woying_35_dip"
+                android:layout_height="@dimen/woying_35_dip"
+                android:layout_marginLeft="@dimen/woying_6_dip" />
+
+            <ImageView
+                android:id="@+id/like3_img"
+                android:layout_width="@dimen/woying_35_dip"
+                android:layout_height="@dimen/woying_35_dip"
+                android:layout_marginLeft="@dimen/woying_6_dip" />
+
+            <ImageView
+                android:id="@+id/like4_img"
+                android:layout_width="@dimen/woying_35_dip"
+                android:layout_height="@dimen/woying_35_dip"
+                android:layout_marginLeft="@dimen/woying_6_dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/like_num_ly"
+            android:layout_marginTop="@dimen/woying_15_dip"
+            android:src="@drawable/like_point_more"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/fenge1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:background="@color/gray_line" />
+
+    <TextView
+        android:id="@+id/commentNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:text="@string/input_comment_hint"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/woying_14_dip" />
+
+    <View
+        android:id="@+id/fenge2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:background="@color/gray_line" />
+
+</LinearLayout>

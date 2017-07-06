@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/mainView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sign_main_background"/>
+
+        <com.coder.kzxt.views.RippleSpreadView
+            android:id="@+id/rippleSpreadView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/rotateImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/sign_rotate"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/woying_20_dip"
+                android:visibility="gone"
+                android:src="@drawable/sign_qr_code"/>
+
+            <TextView
+                android:id="@+id/sign"
+                android:layout_width="@dimen/woying_112_dip"
+                android:layout_height="@dimen/woying_123_dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/sign_background"
+                android:gravity="center"
+                android:text="@string/call"
+                android:textColor="@color/first_theme"
+                android:textSize="@dimen/font_big"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/numberLy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_50_dip"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_transparent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/signNumbers"
+                style="@style/font_white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/about"/>
+
+            <View
+                style="@style/grayVerticalLine"
+                android:layout_margin="@dimen/woying_10_dip"/>
+
+            <TextView
+                android:id="@+id/unSignNumbers"
+                style="@style/font_white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/about"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sign_time_title"
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/woying_10_dip"
+            android:text="@string/sign_time_length"/>
+
+        <TextView
+            android:id="@+id/sign_time"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/browser_dilan_go_down"
+            android:drawablePadding="@dimen/woying_10_dip"
+            android:drawableRight="@drawable/browser_dilan_go_down"
+            android:gravity="center_vertical|end"
+            android:padding="@dimen/woying_10_dip"
+            android:text="5分钟"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/grayHorizontallLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/woying_10_dip"
+            android:text="@string/sign_location"/>
+
+        <TextView
+            android:id="@+id/local"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/browser_dilan_go_down"
+            android:drawablePadding="@dimen/woying_10_dip"
+            android:drawableRight="@drawable/browser_dilan_go_down"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical|end"
+            android:padding="@dimen/woying_10_dip"
+            android:singleLine="true"
+            android:text="@string/location_ing"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/grayHorizontallLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/woying_10_dip"
+            android:text="@string/sign_range"/>
+
+        <TextView
+            android:id="@+id/range"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/browser_dilan_go_down"
+            android:drawablePadding="@dimen/woying_10_dip"
+            android:drawableRight="@drawable/browser_dilan_go_down"
+            android:gravity="center_vertical|end"
+            android:padding="@dimen/woying_10_dip"
+            android:text="100米以内"
+            />
+    </LinearLayout>
+
+</LinearLayout>

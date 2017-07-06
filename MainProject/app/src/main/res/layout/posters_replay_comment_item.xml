@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/posters_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_orange"
+        >
+
+        <RelativeLayout
+            android:id="@+id/posters_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_20_dip">
+
+            <ImageView
+                android:id="@+id/user_head_img"
+                android:layout_width="@dimen/woying_35_dip"
+                android:layout_height="@dimen/woying_35_dip"
+                android:layout_marginRight="@dimen/woying_6_dip"
+                android:layout_marginTop="@dimen/woying_10_dip" />
+
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/woying_20_dip"
+                android:layout_marginRight="@dimen/woying_26_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:gravity="center_vertical"
+                android:text="+1"
+                android:textColor="@color/font_red"
+                android:textSize="@dimen/woying_10_dip"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/posters_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_6_dip"
+                android:layout_marginRight="@dimen/woying_6_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:layout_toRightOf="@+id/user_head_img"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/posters_user_inf_ly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/woying_12_dip" />
+
+                    <TextView
+                        android:id="@+id/user_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_name"
+                        android:layout_marginTop="@dimen/woying_4_dip"
+                        android:text="@string/one_minute_ago"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/woying_8_dip" />
+
+                    <ImageView
+                        android:id="@+id/iuser_name_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/woying_10_dip"
+                        android:layout_toRightOf="@+id/user_name" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/woying_2_dip"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/praise_num_tx"
+                            android:layout_width="@dimen/woying_50_dip"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/woying_2_dip"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/woying_6_dip"
+                            android:textColor="@color/font_gray"
+                            android:textSize="@dimen/woying_10_dip" />
+
+                        <TextView
+                            android:id="@+id/replay_num_tx"
+                            android:layout_width="@dimen/woying_50_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/woying_10_dip"
+                            android:drawableLeft="@drawable/gambit_reply"
+                            android:drawablePadding="@dimen/woying_2_dip"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/woying_6_dip"
+                            android:textColor="@color/font_gray"
+                            android:textSize="@dimen/woying_10_dip" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/posters_content_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/woying_1_dip"
+                    android:maxLines="4"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/woying_5_dip"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:layout_toRightOf="@id/user_head_img"></RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/posters_zong_layout"
+        android:layout_marginLeft="@dimen/woying_20_dip"
+        android:background="@color/gray_line" />
+
+</RelativeLayout>

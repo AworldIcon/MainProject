@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_posters_all_like_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    tools:context="com.coder.kzxt.poster.activity.Posters_All_like_User_Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/OverflowMenuStyle"
+        app:theme="@style/Toolbar"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_ly"
+        android:layout_height="match_parent">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/woying_4_dip"
+            app:layoutManagerType="grid_layout"
+            app:spanCount="2"
+            />
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <include layout="@layout/loading"></include>
+    <include layout="@layout/load_fail"></include>
+    <include layout="@layout/empty_view"></include>
+
+
+</RelativeLayout>

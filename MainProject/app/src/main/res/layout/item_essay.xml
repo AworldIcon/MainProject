@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/woying_30_dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_testpage_title" />
+
+            <com.coder.kzxt.buildwork.views.ContainsEmojiEditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/round_huang_main"
+                android:gravity="top"
+                android:hint="@string/input_result_hint"
+                android:padding="4dip"
+                android:textColor="@color/font_black"
+                android:minHeight="@dimen/woying_80_dip"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/addImageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/round_gray"
+                android:padding="8dip"
+                android:text="@string/add_images"
+                android:textColor="@color/font_gray"
+                android:textSize="14dip"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/imageRely"
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:layout_marginLeft="10dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/delImage"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/del_listen_img" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/answer_Ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/yourAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_result"
+                    android:textColor="@color/font_black"
+                    android:textSize="14dip" />
+
+                <com.coder.kzxt.views.MyListView
+                    android:id="@+id/answerListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_4_dip"
+                    android:layout_marginRight="@dimen/woying_4_dip"
+                    android:layout_toRightOf="@+id/yourAnswer"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/true_answer_Ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:visibility="gone"
+
+                >
+
+                <TextView
+                    android:id="@+id/correctAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correct_result"
+                    android:textColor="@color/font_black"
+                    android:textSize="14dip" />
+
+                <com.coder.kzxt.views.MyListView
+                    android:id="@+id/trueanswerListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_4_dip"
+                    android:layout_marginRight="@dimen/woying_4_dip"
+                    android:layout_toRightOf="@+id/correctAnswer"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/analysis_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/analysis_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/round_theme"
+                    android:paddingBottom="1dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="1dip"
+                    android:text="@string/analysis"
+                    android:textColor="@color/white"
+                    android:textSize="14dip" />
+
+                <com.coder.kzxt.views.MyListView
+                    android:id="@+id/analysis_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/finishTesT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/test_finish"
+        android:gravity="center"
+        android:paddingTop="4dip"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="14dip" />
+
+</LinearLayout>

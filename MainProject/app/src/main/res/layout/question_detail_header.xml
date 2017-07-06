@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_10_dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/question_status_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_empty"
+                android:paddingLeft="@dimen/woying_4_dip"
+                android:paddingRight="@dimen/woying_4_dip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_10_dip"/>
+
+            <TextView
+                android:id="@+id/question_title_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_content_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip"/>
+
+        <ImageView
+            android:id="@+id/question_single_img_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/woying_140_dip"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:adjustViewBounds="true"
+            android:minWidth="@dimen/woying_140_dip"
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
+
+
+        <com.coder.kzxt.views.MyGridView
+            android:id="@id/imgs_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:layout_marginRight="@dimen/woying_6_dip"
+            android:layout_marginTop="@dimen/woying_8_dip"
+            android:cacheColorHint="@color/transparent"
+            android:childDivider="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:horizontalSpacing="@dimen/woying_2_dip"
+            android:listSelector="@color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/woying_6_dip"
+            android:visibility="gone"
+            >
+
+        </com.coder.kzxt.views.MyGridView>
+
+        <RelativeLayout
+            android:id="@+id/voice_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_6_dip">
+
+            <RelativeLayout
+                android:id="@+id/video_question_bj_layout"
+                android:layout_width="@dimen/woying_80_dip"
+                android:layout_height="@dimen/woying_30_dip"
+                android:background="@drawable/chat_other_bj">
+
+                <ImageView
+                    android:id="@+id/video_question_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:src="@drawable/play_voice_false"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/video_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                android:layout_toRightOf="@+id/video_question_bj_layout"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+
+            <ProgressBar
+                android:id="@+id/voice_progress_header"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                android:layout_toRightOf="@+id/video_time_text"
+                android:indeterminateTint="@color/first_theme"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_12_dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/course_name_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/question_detail_course_tag"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+
+            <TextView
+                android:id="@+id/question_reply_num_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/classtopic_particulars_img"
+                android:drawablePadding="@dimen/woying_2_dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_14_dip"
+        android:layout_below="@+id/head_view"
+        android:background="@color/bg_gray"/>
+
+</RelativeLayout>

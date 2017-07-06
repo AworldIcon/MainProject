@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray">
+
+    <RelativeLayout
+        android:id="@+id/download_child_item_zong_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_45_dip">
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="@dimen/woying_225_dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_toLeftOf="@+id/video_check"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_13_dip" />
+
+        <CheckBox
+            android:id="@+id/video_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_8_dip"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

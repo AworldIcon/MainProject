@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popu_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.buildwork.activity.PublishWorkActivity">
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:background="@color/first_theme">
+
+        <ImageView
+            android:id="@+id/leftImage"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back_up" />
+
+        <TextView
+            android:id="@+id/leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_12_dip" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="@dimen/woying_100_dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_120_dip"
+            android:layout_marginRight="@dimen/woying_5_dip"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="222222"
+            android:gravity="center"
+            android:scrollHorizontally="true"
+            android:textSize="@dimen/woying_14_dip" />
+        <ImageView
+            android:id="@+id/change_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/change_name"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/title"
+            />
+        <TextView
+            android:id="@+id/rightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_12_dip"
+            />
+
+    </RelativeLayout>
+    <com.coder.kzxt.buildwork.views.DragView
+        android:id="@+id/dragView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:layout_marginBottom="@dimen/woying_40_dip"
+        android:layout_below="@+id/title_layout"
+        android:visibility="gone"/>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:visibility="gone"
+        android:layout_below="@+id/title_layout"
+        >
+    </ListView>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        layout="@layout/loading" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        layout="@layout/load_fail" />
+    <LinearLayout
+        android:id="@+id/no_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/no_info_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/no_questionbank" />
+
+        <TextView
+            android:id="@+id/no_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/woying_8_dip"
+            android:text="@string/no_info_text"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:textColor="@color/font_black"
+            android:textSize="14dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/hand_build"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/hand_build"
+            android:textColor="@color/font_white"
+            android:layout_marginRight="@dimen/woying_1_dip"
+            android:background="@color/first_theme"
+            />
+        <Button
+            android:id="@+id/bank_build"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/bank_build"
+            android:textColor="@color/font_white"
+            android:background="@color/first_theme"
+            />
+    </LinearLayout>
+</RelativeLayout>

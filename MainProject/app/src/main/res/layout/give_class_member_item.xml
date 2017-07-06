@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/woying_4_dip"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/member_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/woying_20_dip"
+            >
+
+        <ImageView
+            android:id="@+id/member_img"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="@dimen/woying_50_dip"
+            android:src="@drawable/default_me_myimg"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/member_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_4_dip"
+            android:layout_below="@+id/member_img"
+            android:layout_centerHorizontal="true"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:textColor="@color/font_black"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:text="ssssss"
+            android:textSize="@dimen/woying_14_dip" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

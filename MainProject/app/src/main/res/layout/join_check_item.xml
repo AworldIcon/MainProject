@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_20_dip"
+        android:layout_marginTop="@dimen/woying_10_dip">
+
+        <ImageView
+            android:id="@+id/class_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_common_header" />
+
+        <TextView
+            android:id="@+id/tv_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/class_icon"
+            android:layout_toRightOf="@+id/class_icon"
+            android:paddingLeft="@dimen/woying_20_dip"
+            android:text="高校云技术部"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/class_icon"
+            android:layout_toRightOf="@+id/class_icon"
+            android:paddingLeft="@dimen/woying_20_dip"
+            android:text="2017-06-09"
+            android:textColor="@color/oder_state_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/class_icon"
+            android:layout_toRightOf="@+id/tv_date"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/woying_10_dip"
+            android:text="17:14"
+            android:textColor="@color/oder_state_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_toLeftOf="@+id/tv_refused"
+            android:background="@drawable/class_check_shape"
+            android:text="@string/btn_agree"
+            android:textColor="@color/font_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_refused"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:background="@drawable/class_check_shape"
+            android:text="@string/btn_refuse"
+            android:textColor="@color/font_black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

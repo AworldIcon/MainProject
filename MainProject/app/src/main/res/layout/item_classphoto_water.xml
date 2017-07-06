@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/class_photo_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_white"
+    android:layout_margin="@dimen/woying_5_dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/imageRy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants">
+
+        <com.coder.kzxt.views.StgImageView
+            android:id="@+id/stgImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/photo_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/userFace"
+            android:layout_width="@dimen/woying_35_dip"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/woying_10_dip"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:src="@drawable/default_me_myimg"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/userName"
+            style="@style/font_normal_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_8_dip"
+            android:layout_marginRight="@dimen/woying_4_dip"
+            android:layout_toRightOf="@id/userFace"
+            android:maxLength="4" />
+
+        <LinearLayout
+            android:id="@+id/likeLy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/woying_3_dip"
+            android:paddingTop="@dimen/woying_8_dip">
+
+            <ImageView
+                android:id="@+id/likeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/woying_2_dip"
+                android:paddingTop="@dimen/woying_2_dip"
+                android:src="@drawable/like_unselect"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/like_count"
+                style="@style/font_normal_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/woying_3_dip"
+                android:paddingBottom="@dimen/woying_2_dip"
+                android:paddingTop="@dimen/woying_2_dip"
+                android:text="@string/no_num"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

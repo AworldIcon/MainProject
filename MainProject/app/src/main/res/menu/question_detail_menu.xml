@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools">
+
+
+    <item
+        android:id="@+id/share_menu"
+        android:icon="@drawable/share"
+        android:showAsAction="never"
+        android:title="@string/share"
+        tools:ignore="AppCompatResource"/>
+
+
+    <item
+        android:id="@+id/collection_menu"
+        android:icon="@drawable/enshrine_question"
+        android:showAsAction="never"
+        android:title="@string/collect"
+        tools:ignore="AppCompatResource"/>
+
+
+    <item
+        android:id="@+id/report_menu"
+        android:icon="@drawable/posters_report"
+        android:showAsAction="never"
+        android:title="@string/report"
+        tools:ignore="AppCompatResource"/>
+
+
+    <item
+        android:id="@+id/delete_menu"
+        android:icon="@drawable/question_delete"
+        android:showAsAction="never"
+        android:title="@string/delete"
+        tools:ignore="AppCompatResource"/>
+
+
+    <item
+        android:id="@+id/resume_menu"
+        android:icon="@drawable/question_resume"
+        android:showAsAction="never"
+        android:title="@string/recover_question"
+        tools:ignore="AppCompatResource"/>
+
+
+</menu>

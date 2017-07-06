@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/background_light_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_voice"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/chat_voice_selector"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_keyboard"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/chat_keyboard_selector"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/voice_panel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_voice_talk"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/chat_press_talk"
+            android:textColor="@color/font_gray"
+            android:textSize="16sp"
+            android:visibility="gone">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/text_panel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_edittext_backgroud"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/input"
+                style="@style/font_normal_small"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textCursorDrawable="@null"/>
+
+            <ImageButton
+                android:id="@+id/btnEmoticon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/chat_face_selector"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/chat_add_selector"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="50dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/round_theme"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/morePanel"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/background_light_gray"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/chat_more_picture"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/chat_more_picture"
+                android:gravity="center"
+                android:text="@string/picture"/>
+
+            <TextView
+                android:id="@+id/chat_more_camera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/chat_more_camera"
+                android:gravity="center"
+                android:text="@string/btn_take_photo"/>
+
+            <TextView
+                android:id="@+id/chat_more_work"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/chat_more_work"
+                android:gravity="center"
+                android:text="@string/work"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/chat_more_test"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/chat_more_test"
+                android:gravity="center"
+                android:text="@string/exame_manage"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:visibility="gone"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/chat_more_sign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/chat_more_sign"
+                android:gravity="center"
+                android:text="@string/sign_string"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.coder.kzxt.im.view.EmojiViewPage
+        android:id="@+id/viewPagerEmoji"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/background_light_gray"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </com.coder.kzxt.im.view.EmojiViewPage>
+
+</LinearLayout>

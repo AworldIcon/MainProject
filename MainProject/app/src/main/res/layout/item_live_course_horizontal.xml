@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/woying_10_dip"
+    android:paddingRight="@dimen/woying_10_dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_16_dip"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/woying_16_dip">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/courseImg"
+                style="@style/image_horizontal_large"
+                android:src="@drawable/my_course_def" />
+
+            <ImageView
+                android:id="@+id/coursePriceStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/courseImg" />
+
+            <include
+                layout="@layout/view_item_course_live_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/courseImg"
+                android:layout_alignLeft="@id/courseImg"
+                android:layout_alignRight="@id/courseImg" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/courseName"
+                style="@style/font_normal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/className"
+                style="@style/font_gray_small_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/courseTeacher"
+                    style="@style/font_gray_small_single"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/studentNumber"
+                    style="@style/font_gray_small_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:drawableLeft="@drawable/live_num_iv"
+                    android:drawablePadding="@dimen/woying_4_dip"
+                    android:gravity="center_vertical"
+                    android:text="" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/grayHorizontallLine" />
+</LinearLayout>

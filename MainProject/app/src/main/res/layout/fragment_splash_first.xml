@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first_launche_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/launcher_yun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/launcher_yun"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/launcher1_mountain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/launcher1_mountain"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/launcher1_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/launcher1_paper"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/launcher1_manage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/launcher1_manage"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/launcher1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/launcher1_text"
+        android:visibility="gone" />
+</RelativeLayout>

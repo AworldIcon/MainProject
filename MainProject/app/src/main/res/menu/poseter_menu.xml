@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_status"
+        android:icon="@drawable/arrow_down_white"
+        android:title="@string/all"/>
+    <item
+        android:id="@+id/menu_type"
+        android:icon="@drawable/poseter_list"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/menu_publish"
+        android:icon="@drawable/poseter_publish"
+        android:title="@string/poseter_publish"/>
+
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-1dip"
+        android:layout_marginTop="-1dip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/woying_10_dip" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/woying_40_dip"
+            android:layout_height="@dimen/woying_40_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/poster_cata_all"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:gravity="center_horizontal"
+            android:text="@string/submit"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip" />
+    </LinearLayout>
+
+</LinearLayout>

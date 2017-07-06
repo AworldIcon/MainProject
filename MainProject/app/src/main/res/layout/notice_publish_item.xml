@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/woying_5_dip"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/head_image"
+        android:layout_width="@dimen/woying_40_dip"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_marginRight="@dimen/woying_5_dip"
+        android:src="@drawable/default_teacher_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/notice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/woying_13_dip"
+                android:textColor="@color/font_black"
+                android:text="12346"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/woying_12_dip"
+                android:layout_alignParentRight="true"
+                android:text="shijian"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/publish_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_gray"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:text="发送人: "/>
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

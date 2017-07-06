@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange">
+
+    <RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/woying_10_dip"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/iv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/iv_small_location" />
+
+                    <TextView
+                        android:id="@+id/tv_order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/woying_5_dip"
+                        android:textColor="@color/oder_user_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_order_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/woying_20_dip"
+                        android:layout_weight="1.93"
+                        android:textColor="@color/oder_user_color"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_order_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:textColor="@color/order_address_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/department_go" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/order_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_content"
+            android:src="@drawable/order_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:src="@drawable/iv_large_location" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_address"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/woying_10_dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_no_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_address"
+                android:text="@string/no_shopping_address"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_add_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_address"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:layout_toRightOf="@id/tv_no_address"
+                android:text="@string/go_to_add"
+                android:textColor="@color/add_address_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

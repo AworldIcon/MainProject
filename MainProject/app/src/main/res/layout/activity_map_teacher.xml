@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_gray"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+
+    <LinearLayout
+        android:id="@+id/map_ly"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/woying_40_dip"
+            android:layout_height="@dimen/woying_40_dip"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/first_theme"
+            android:indeterminateTintMode="src_atop"/>
+
+        <com.coder.kzxt.recyclerview.MyRecyclerView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@color/transparent"
+            android:childDivider="@null"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:groupIndicator="@null"
+            android:listSelector="@color/transparent"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

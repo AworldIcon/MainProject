@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange"
+    android:padding="@dimen/woying_5_dip">
+
+
+    <RelativeLayout
+        android:id="@+id/boutique_course_img_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/boutique_course_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_86_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/my_course_def" />
+        <ImageView
+            android:id="@+id/free_or_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/boutique_course_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boutique_course_img_rl"
+        android:layout_marginLeft="@dimen/woying_4_dip"
+        android:layout_marginRight="@dimen/woying_4_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/woying_12_dip" />
+
+    <LinearLayout
+        android:id="@+id/public_course_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boutique_course_name"
+        android:layout_marginLeft="@dimen/woying_4_dip"
+        android:layout_marginRight="@dimen/woying_4_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_4_dip">
+
+        <TextView
+            android:id="@+id/boutique_school_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/school_icon"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_10_dip" />
+
+        <TextView
+            android:id="@+id/common_lesson_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/woying_10_dip" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/boutique_course_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boutique_course_name"
+        android:layout_marginLeft="@dimen/woying_4_dip"
+        android:layout_marginRight="@dimen/woying_4_dip"
+        android:layout_marginTop="@dimen/woying_4_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/woying_4_dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/boutique_course_hour_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/mainfragment_excellent_courses_time"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_10_dip" />
+
+        <TextView
+            android:id="@+id/boutique_lesson_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/woying_10_dip" />
+
+    </RelativeLayout>
+</RelativeLayout>

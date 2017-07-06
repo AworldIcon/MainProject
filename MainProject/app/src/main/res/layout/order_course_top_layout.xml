@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_course_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_course"
+        android:layout_width="@dimen/woying_100_dip"
+        android:layout_height="@dimen/woying_60_dip"
+        android:layout_margin="@dimen/woying_10_dip">
+
+        <ImageView
+            android:id="@+id/iv_course"
+            android:layout_width="@dimen/woying_120_dip"
+            android:layout_height="@dimen/woying_74_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/my_course_def" />
+
+        <ImageView
+            android:id="@+id/free_or_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rl_course"
+        android:layout_toRightOf="@+id/rl_course"
+        android:text="课程名称"
+        android:textColor="@color/oder_user_color"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rl_course"
+        android:layout_toRightOf="@+id/rl_course">
+
+        <TextView
+            android:id="@+id/tv_course_hourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_course_hours"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_course_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_course_hourse"
+            android:text="0"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_20_dip"
+            android:layout_toRightOf="@id/tv_course_time"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学员:"
+                android:textColor="@color/oder_state_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:text="10"
+                android:textColor="@color/oder_state_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_course_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:text="@string/price_value"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

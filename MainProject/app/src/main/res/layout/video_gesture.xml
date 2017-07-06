@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/gesture_progress_layout"
+        android:layout_width="120dip"
+        android:layout_height="80dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_hei"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/gesture_iv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:src="@drawable/souhu_player_backward" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gesture_iv_progress"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/geture_tv_progress_cut_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_begin"
+                android:textColor="@color/first_theme"
+                android:textSize="@dimen/woying_12_dip" />
+
+            <TextView
+                android:id="@+id/geture_tv_progress_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_end"
+                android:textColor="@color/video_font_gray"
+                android:textSize="@dimen/woying_12_dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

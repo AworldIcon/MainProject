@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:oneshot="false" >  
+　　<item android:duration="40" android:drawable="@drawable/loading_1" />  
+　　<item android:duration="40" android:drawable="@drawable/loading_2" />  
+　　<item android:duration="40" android:drawable="@drawable/loading_3" />  
+　　<item android:duration="40" android:drawable="@drawable/loading_4" />  
+　　<item android:duration="40" android:drawable="@drawable/loading_5" />  
+　　<item android:duration="40" android:drawable="@drawable/loading_6" />
+　　<item android:duration="40" android:drawable="@drawable/loading_7" />
+　　<item android:duration="40" android:drawable="@drawable/loading_8" />
+　　<item android:duration="40" android:drawable="@drawable/loading_9" />
+　　<item android:duration="40" android:drawable="@drawable/loading_10" />
+　　<item android:duration="40" android:drawable="@drawable/loading_11" />
+　　<item android:duration="40" android:drawable="@drawable/loading_12" />
+　　<item android:duration="40" android:drawable="@drawable/loading_13" />
+　　<item android:duration="40" android:drawable="@drawable/loading_14" />
+　　<item android:duration="40" android:drawable="@drawable/loading_15" />
+　　<item android:duration="40" android:drawable="@drawable/loading_16" />
+　　<item android:duration="40" android:drawable="@drawable/loading_17" />
+　　<item android:duration="40" android:drawable="@drawable/loading_18" />
+　　<item android:duration="40" android:drawable="@drawable/loading_19" />
+　　<item android:duration="40" android:drawable="@drawable/loading_20" />
+　　<item android:duration="40" android:drawable="@drawable/loading_21" />
+　　<item android:duration="40" android:drawable="@drawable/loading_22" />
+　　<item android:duration="40" android:drawable="@drawable/loading_23" />
+　　<item android:duration="40" android:drawable="@drawable/loading_24" />
+　　<item android:duration="40" android:drawable="@drawable/loading_25" />
+　　<item android:duration="40" android:drawable="@drawable/loading_26" />
+　　<item android:duration="40" android:drawable="@drawable/loading_27" />
+　　<item android:duration="40" android:drawable="@drawable/loading_28" />
+　　<item android:duration="40" android:drawable="@drawable/loading_29" />
+　　<item android:duration="40" android:drawable="@drawable/loading_30" />
+　　<item android:duration="40" android:drawable="@drawable/loading_31" />
+　　<item android:duration="40" android:drawable="@drawable/loading_32" />
+　　<item android:duration="40" android:drawable="@drawable/loading_33" />
+　　<item android:duration="40" android:drawable="@drawable/loading_34" />
+　　<item android:duration="40" android:drawable="@drawable/loading_35" />
+　　<item android:duration="40" android:drawable="@drawable/loading_36" />
+　　<item android:duration="40" android:drawable="@drawable/loading_37" />
+　　<item android:duration="40" android:drawable="@drawable/loading_38" />
+　　<item android:duration="40" android:drawable="@drawable/loading_39" />
+　　<item android:duration="40" android:drawable="@drawable/loading_40" />
+</animation-list>

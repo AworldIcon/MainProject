@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/woying_274_dip"
+    >
+    <!--EFEFEF-->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/woying_44_dip"
+       android:background="@color/bg_white"
+       android:layout_gravity="bottom"
+       >
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/woying_6_dip"
+           android:background="@color/bg_gray"
+           />
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="课程目录"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/woying_6_dip"
+        android:textSize="@dimen/woying_13_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:textColor="@color/font_gray"
+        />
+
+
+       <TextView
+           android:id="@+id/course_par_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/course_introduce"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="@dimen/woying_6_dip"
+           android:layout_alignParentRight="true"
+           android:textSize="@dimen/woying_10_dip"
+           android:layout_marginRight="@dimen/woying_10_dip"
+           android:textColor="@color/first_theme"
+           android:paddingTop="@dimen/woying_2_dip"
+           android:paddingBottom="@dimen/woying_2_dip"
+           android:paddingRight="@dimen/woying_6_dip"
+           android:paddingLeft="@dimen/woying_6_dip"
+           android:background="@drawable/round_hui_360"
+           />
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1px"
+           android:background="@color/gray_line"
+           android:layout_alignParentBottom="true"
+           >
+       </View>
+
+   </RelativeLayout>
+
+</FrameLayout>

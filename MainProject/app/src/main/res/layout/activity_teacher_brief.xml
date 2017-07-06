@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_teacher_brief"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    tools:context="com.coder.kzxt.course.activity.TeacherBriefActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bgImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_130_dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/userFace"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_below="@+id/bgImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-32dip"
+                android:background="@drawable/default_me_myimg" />
+
+            <TextView
+                android:id="@+id/userName"
+                style="@style/font_normal_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userFace"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/woying_10_dip" />
+
+            <TextView
+                android:id="@+id/brief"
+                style="@style/font_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/woying_20_dip" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

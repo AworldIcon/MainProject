@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/ripple_orange"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/woying_8_dip"
+    android:layout_marginRight="@dimen/woying_8_dip"
+    android:layout_marginTop="@dimen/woying_3_dip"
+    android:layout_marginBottom="@dimen/woying_3_dip">
+    <ImageView
+        android:id="@+id/head_image"
+        android:layout_width="@dimen/woying_40_dip"
+        android:layout_height="@dimen/woying_40_dip"
+        android:src="@drawable/default_teacher_header"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/head_image"
+        android:layout_marginLeft="@dimen/woying_5_dip"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/stu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="@dimen/woying_12_dip"
+            android:textColor="@color/font_black"
+            android:layout_marginBottom="@dimen/woying_2_dip"/>
+        <TextView
+            android:id="@+id/class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/woying_12_dip"
+            android:textColor="@color/font_gray"
+            android:text="123"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_1_dip"
+        android:layout_marginLeft="@dimen/woying_8_dip"
+        android:layout_marginRight="@dimen/woying_8_dip"
+        android:background="@color/background_light_gray"/>
+</LinearLayout>

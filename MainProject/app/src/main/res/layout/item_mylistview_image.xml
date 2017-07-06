@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange">
+    <View
+        android:id="@+id/fenge"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line" />
+    <RelativeLayout
+        android:id="@+id/item_myListview_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_70_dip"
+        android:layout_below="@+id/fenge">
+
+        <ImageView
+            android:id="@+id/item_myListview_item_view"
+            android:layout_width="@dimen/woying_75_dip"
+            android:layout_height="@dimen/woying_50_dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_15_dip"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/item_myListview_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/item_myListview_item_view"
+            android:layout_marginLeft="@dimen/woying_8_dip"
+            android:layout_marginRight="@dimen/woying_5_dip"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:layout_toLeftOf="@+id/item_myListview_item_jiantou"
+            android:layout_toRightOf="@id/item_myListview_item_view"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/course_name"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip" />
+
+        <TextView
+            android:id="@+id/item_myListview_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_myListview_item_view"
+            android:layout_marginBottom="@dimen/woying_5_dip"
+            android:layout_marginLeft="@dimen/woying_8_dip"
+            android:layout_marginRight="@dimen/woying_5_dip"
+            android:layout_toLeftOf="@+id/item_myListview_item_jiantou"
+            android:layout_toRightOf="@id/item_myListview_item_view"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/course_tea"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip" />
+
+        <ImageView
+            android:id="@+id/item_myListview_item_jiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:src="@drawable/sliding_jiantou" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.download.DownloadServiceFragment">
+
+    <com.coder.kzxt.recyclerview.MyRecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <include layout="@layout/empty_view"></include>
+
+</RelativeLayout>

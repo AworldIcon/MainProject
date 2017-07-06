@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="bg_waveView">#9ECEF6</color>
+
+    <!-- 第一主题色 -->
+    <color name="first_theme">#2ea9ff</color>
+    <!-- 第二主题色 -->
+    <color name="second_theme">#6388ae</color>
+    <!--========================================================================================================= -->
+
+    <!-- 所有字体用font_颜色值 命名 -->
+    <color name="font_dark_black2">#525252</color>
+    <color name="font_price_coin">#f1b638</color>
+
+    <!-- 通用 -->
+    <color name="trans_half">#50000000</color>
+    <color name="trans_eight">#80000000</color>
+    <color name="trans_black">#30000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_line">#f0f0f0</color>
+
+
+    <!-- 字体颜色 -->
+    <color name="font_black">#141414</color>
+    <color name="font_dark_black">#3e3a39</color>
+    <color name="font_light_black">#898989</color>
+    <color name="font_white">#FFFFFFFF</color>
+    <color name="font_red">#FFcb151d</color>
+    <color name="font_red2">#ff0000</color>
+    <color name="font_green">#5bc106</color>
+    <color name="font_orange">#f3872e</color>
+    <color name="font_blue">#3BA0FE</color>
+    <color name="font_question_blue">#4784c3</color>
+    <color name="font_pink">#FF69B4</color>
+    <color name="font_gray">#747474</color>
+    <color name="font_light_gray">#acacac</color>
+    <color name="font_dark_gray">#979797</color>
+    <color name="video_font_gray">#9e9f9f</color>
+    <color name="font_yew">#FFD102</color>
+    <color name="font_white_tablayout_unselect">#80FFFFFF</color>
+    <color name="font_no_join">#999999</color>
+
+
+    <!-- 背景色 -->
+    <color name="background_gray">#f0eff5</color>
+    <color name="background_light_gray">#F8F8F8</color>
+    <color name="background_dark_gray">#FFe0e0e0</color>
+    <color name="background_red">#FFcb151d</color>
+    <color name="background_blue">#009DE3</color>
+    <color name="background_green">#5bc106</color>
+    <color name="background_orange">#f3872e</color>
+    <color name="background_line">#F0F2F6</color>
+
+
+    <!-- 所有背景用bg_颜色值 命名 -->
+    <color name="bg_gray">#F0F2F6</color>
+    <color name="bg_white">#FFFFFFFF</color>
+    <color name="bg_green">#4bd865</color>
+    <color name="bg_ripple">#E2E2E2</color>
+    <color name="bg_red">#F55F62</color>
+    <color name="bg_dark_gray">#C2C8CC</color>
+    <color name="bg_blue">#05B0F4</color>
+    <color name="bg_touming">#55ffffff</color>
+    <color name="bg_pro">#E5F0FD</color>
+    <color name="bg_gray_f6">#F6F6F6</color>
+    <color name="bg_join_study">#d3d3d3</color>
+
+
+    <!--引导页背景色-->
+    <color name="bg_splash">#79C9FC</color>
+    <color name="bg_black">#000000</color>
+    <color name="bg_video_im">#DFF0FA</color>
+    <color name="bg_video_work">#FDEAD9</color>
+    <color name="bg_video_exam">#FDE5E5</color>
+    <color name="bg_video_live">#DFF9EE</color>
+    <color name="bg_video_signin">#E7EAF9</color>
+    <color name="bg_video_question">#e2f2c5</color>
+    <color name="bg_tablayout_line">#FBFFFF</color>
+    <color name="new_gray_line">#20ffffff</color>
+
+
+    <!--海报主题色-->
+    <color name="poster_template1">#9DBAB0</color>
+    <color name="poster_template2">#9AAC95</color>
+    <color name="poster_template3">#B9BA9D</color>
+    <color name="poster_template4">#ACA095</color>
+    <color name="poster_template5">#C1A7B7</color>
+    <color name="poster_template6">#B0B9C7</color>
+    <color name="poster_template7">#9EA3BC</color>
+    <color name="poster_template8">#ADA0C0</color>
+    <color name="poster_template9">#E5E5E5</color>
+    <!--发布海报选择类型的背景色-->
+    <color name="poster_background_blue">#416386</color>
+
+
+    <!--自定义吐司背景-->
+    <color name="bg_toast">#AA000000</color>
+
+    <color name="lan11_new">#5faff2</color>
+    <color name="style_lv">#5adfcf</color>
+    <color name="style_lan">#5faff2</color>
+    <color name="style_hong">#fc7578</color>
+    <color name="analysis_black">#525252</color>
+    <color name="card_huang">#FDB901</color>
+    <color name="bg_light_gray">#F5F8FE</color>
+    <color name="progress_bj_new">#d8d8d8</color>
+    <color name="sign_font_black">#494949</color>
+    <color name="sign_bg_gray">#A1A1A1</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="color_btn">#55ffffff</color>
+
+    <color name="font_yellow_question">#f8af75</color>
+    <color name="bg_login_color">#DBDCE1</color>
+    <color name="bg_input_color">#f1f5f8</color>
+    <color name="bg_login_input">#B3B3B3</color>
+    <color name="bg_register_color">#F0EFF4</color>
+    <color name="bg_register_line">#D6D6D6</color>
+    <color name="bg_code_color">#C2C2C2</color>
+    <color name="bg_set_color">#F3F2F6</color>
+    <color name="safe_font">#696969</color>
+    <color name="password_color">#D7D7D7</color>
+    <color name="oder_user_color">#333333</color>
+    <color name="order_address_color">#666666</color>
+    <color name="add_address_color">#ff7800</color>
+    <color name="oder_state_color">#999999</color>
+    <color name="order_course_color">#FAFAFA</color>
+
+    <!--二维码-->
+    <color name="qr_code_white">#FFFFFFFF</color>
+    <color name="qr_code_flashlight_bg">#66000000</color>
+    <color name="qr_code_finder_mask">#80000000</color>
+    <color name="qr_code_flash_light_text_color">#66FFFFFF</color>
+    <color name="qr_code_finder_frame">#FFFFFFFF</color>
+    <color name="qr_code_finder_laser">#ef8394</color>
+    <color name="font_identify_qcode">#0df1ff</color>
+    <!--班级圈-->
+    <color name="create_class_color">#cccccc</color>
+    <color name="contacts_normal" >#eae8e8</color>
+    <color name="contacts_press" >#bcb2b2</color>
+    <color name="public_topic">#00cbff</color>
+    <color name="reply_color">#d4d4d4</color>
+    <color name="topic_detail_reply">#EEEFF0</color>
+    <color name="banned_join">#E3E2E4</color>
+
+</resources>

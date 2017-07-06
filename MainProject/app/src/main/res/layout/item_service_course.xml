@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/woying_160_dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/woying_160_dip"
+        android:layout_height="@dimen/woying_90_dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/my_course_def"/>
+
+    <TextView
+        android:id="@+id/courseName"
+        style="@style/font_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="@dimen/woying_6_dip"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseName"
+        android:paddingBottom="@dimen/woying_8_dip"
+        android:paddingLeft="@dimen/woying_4_dip"
+        android:textSize="@dimen/font_small"
+        />
+
+</RelativeLayout>

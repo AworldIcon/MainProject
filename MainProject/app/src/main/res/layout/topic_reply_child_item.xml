@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reply_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/reply_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:layout_marginBottom="@dimen/woying_5_dip">
+
+        <LinearLayout
+            android:id="@+id/reply_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_55_dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_reply_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三"
+                android:textColor="@color/font_question_blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:layout_marginRight="@dimen/woying_5_dip"
+                android:layout_toRightOf="@+id/tv_reply_user"
+                android:text="回复"
+                android:textColor="@color/font_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_by_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李四"
+                android:textColor="@color/font_question_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reply_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_55_dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reply_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reply_top_layout"
+        android:layout_marginLeft="@dimen/woying_55_dip"
+        android:layout_marginBottom="@dimen/woying_10_dip">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3天前"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_30_dip"
+            android:layout_toRightOf="@+id/tv_date"
+            android:text="@string/delete"
+            android:textColor="@color/oder_state_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

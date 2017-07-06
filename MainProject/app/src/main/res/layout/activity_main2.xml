@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.coder.kzxt.question.activity.Main2Activity">
+<TextView
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/woying_50_dip"
+    android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/ball"
+        android:layout_width="@dimen/woying_100_dip"
+        android:layout_height="@dimen/woying_100_dip"
+        android:src="@drawable/question_store"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

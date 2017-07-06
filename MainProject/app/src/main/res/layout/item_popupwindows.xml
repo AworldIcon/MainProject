@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/fenge_1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+
+        <Button
+            android:id="@+id/item_popupwindows_camera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_45_dip"
+            android:background="@drawable/bt_nobgd"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_16_dip" />
+
+        <View
+            android:id="@+id/fenge_2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+
+
+        <Button
+            android:id="@+id/item_popupwindows_Photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_45_dip"
+            android:background="@drawable/bt_nobgd"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_16_dip" />
+
+
+        <View
+            android:id="@+id/text_fenge"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/item_popupwindows_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_45_dip"
+            android:background="@drawable/bt_nobgd"
+            android:text="@string/only_words"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_16_dip"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/fenge_3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+
+        <Button
+            android:id="@+id/item_popupwindows_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_45_dip"
+            android:background="@drawable/bt_nobgd"
+            android:text="@string/cancel"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_16_dip" />
+    </LinearLayout>
+
+</RelativeLayout>

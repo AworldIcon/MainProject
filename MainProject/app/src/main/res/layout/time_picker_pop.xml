@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#50000000"
+                android:id="@+id/activity_publish_work_time"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/font_white"
+            >
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/woying_10_dip"
+                android:text="取消"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_14_dip"/>
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/woying_10_dip"
+                android:text="确定"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/woying_14_dip"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_1_dip"
+            android:background="@color/bg_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:timePickerMode="spinner"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

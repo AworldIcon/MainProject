@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/class_particulars_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/class_particulars_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_44_dip"
+        android:background="@color/first_theme"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <Button
+            android:id="@+id/class_particulars_back_button"
+            android:layout_width="@dimen/woying_50_dip"
+            android:layout_height="@dimen/woying_44_dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back_up" />
+
+        <TextView
+            android:id="@+id/catalogue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/class_particulars"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_14_dip" />
+
+        <TextView
+            android:id="@+id/add_class_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/catalogue_text"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:gravity="center_vertical|center"
+            android:text="@string/join_class"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_12_dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_class_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/catalogue_text"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:gravity="center_vertical|center"
+            android:text="@string/p2refresh_end_load_more"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_12_dip"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/check_class_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/catalogue_text"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:gravity="center_vertical|center"
+            android:text="@string/checking"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_12_dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/forbid_class_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/catalogue_text"
+            android:layout_marginRight="@dimen/woying_15_dip"
+            android:gravity="center_vertical|center"
+            android:text="@string/joinin_ban"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_12_dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/activity_class_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/class_particulars_title_layout"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_gray" >
+
+            <include
+                android:id="@+id/include_class_particulars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/class_particulars_header" />
+
+            <View
+                android:id="@+id/include_class_particulars_down"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include_class_particulars"
+                android:background="@color/bg_gray"
+                android:visibility="visible" />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/woying_20_dip"
+                layout="@layout/empty_view" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <include
+        layout="@layout/load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/class_particulars_title_layout" />
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/class_particulars_title_layout" />
+</RelativeLayout>

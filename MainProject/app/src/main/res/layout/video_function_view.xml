@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/woying_10_dip"
+    >
+
+    <TextView
+        android:id="@+id/func_tx"
+        android:layout_width="@dimen/woying_45_dip"
+        android:layout_height="@dimen/woying_45_dip"
+        android:text="@string/ims"
+        android:background="@drawable/circle_bg"
+        android:textColor="@color/font_gray"
+        android:gravity="center"
+        android:textSize="@dimen/woying_12_dip"
+        />
+
+    <View
+        android:id="@+id/work_notify_view"
+        android:layout_width="@dimen/woying_8_dip"
+        android:layout_height="@dimen/woying_8_dip"
+        android:gravity="center"
+        android:background="@drawable/round_red_dian"
+        android:layout_alignRight="@+id/func_tx"
+        android:layout_alignEnd="@+id/func_tx"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp" />
+</RelativeLayout>

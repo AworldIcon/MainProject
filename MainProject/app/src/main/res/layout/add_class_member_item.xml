@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/class_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:layout_marginLeft="@dimen/woying_20_dip"
+        android:layout_marginTop="@dimen/woying_10_dip">
+
+        <ImageView
+            android:id="@+id/class_icon"
+            android:layout_width="@dimen/woying_35_dip"
+            android:layout_height="@dimen/woying_35_dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_common_header" />
+
+        <TextView
+            android:id="@+id/tv_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/class_icon"
+            android:layout_alignTop="@+id/class_icon"
+            android:layout_marginLeft="@dimen/woying_20_dip"
+            android:text="高校云技术部"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_member_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/class_icon"
+            android:layout_alignBottom="@+id/class_icon"
+            android:layout_marginLeft="@dimen/woying_20_dip"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:text="人"
+            android:textColor="@color/font_gray"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/bg_blue"
+            android:text="@string/button_add"
+            android:textColor="@color/font_white"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:layout_marginBottom="@dimen/woying_5_dip"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fill_item_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip">
+
+        <com.coder.kzxt.buildwork.views.ContainsEmojiEditText
+            android:id="@+id/fill_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_huang_main"
+            android:gravity="center|left"
+            android:hint="@string/input_answer_hint"
+            android:paddingLeft="8dip"
+            android:paddingRight="0dip"
+            android:textColor="@color/font_black"
+            android:minHeight="@dimen/woying_30_dip"
+            android:textSize="12dip" />
+
+    </RelativeLayout>
+</LinearLayout>

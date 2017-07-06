@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/finish_school"/>
+
+            <EditText
+                android:id="@+id/school"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请输入毕业学校名称"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/category"/>
+
+
+            <EditText
+                android:id="@+id/category"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请输入专业名称"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/academic"/>
+
+
+            <TextView
+                android:id="@+id/academic"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:drawableRight="@drawable/department_down"
+                android:gravity="center_vertical"
+                android:hint="请选择学历"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingRight="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/finish_school_day"/>
+
+
+            <TextView
+                android:id="@+id/finishDay"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:drawableRight="@drawable/department_down"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingRight="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text="2010-7-1"/>
+
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/work_experience"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/experience"
+                    style="@style/font_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:background="@drawable/round_gray1"
+                    android:gravity="top"
+                    android:hint="请输入工作经历"
+                    android:maxLength="500"
+                    android:minHeight="@dimen/woying_80_dip"
+                    android:padding="6dp"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/fontNumber"
+                    style="@style/font_gray_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="@dimen/woying_12_dip"
+                    android:text="0/500"/>
+            </FrameLayout>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/want_work_city"/>
+
+            <TextView
+                android:id="@+id/city"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:drawableRight="@drawable/department_down"
+                android:gravity="center_vertical"
+                android:hint="省/自治区/直辖市/市"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingRight="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/woying_40_dip"
+                android:layout_margin="@dimen/woying_30_dip"
+                android:background="@drawable/round_huang3_loginsetting"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_16_dip"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

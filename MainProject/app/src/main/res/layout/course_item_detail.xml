@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/course_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_image"
+            android:layout_width="@dimen/woying_120_dip"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/course_img"
+                android:layout_width="@dimen/woying_120_dip"
+                android:layout_height="@dimen/woying_74_dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/my_course_def" />
+
+            <ImageView
+                android:id="@+id/free_or_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_progress"
+                android:layout_width="@dimen/woying_100_dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/course_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/woying_5_dip"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/woying_5_dip"
+                    android:text="已学完"
+                    android:textColor="@color/bg_white"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/woying_100_dip"
+                    android:layout_height="@dimen/woying_8_dip"
+                    android:layout_below="@+id/tv_progress"
+                    android:progressDrawable="@drawable/my_learn_progressbar"
+                    android:max="100" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/course_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/woying_6_dip"
+                    android:maxLines="2"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <TextView
+                    android:id="@+id/teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_marginTop="@dimen/woying_6_dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/study_time"
+                        style="@style/font_gray_small_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/iv_course_folder"
+                        android:drawablePadding="@dimen/woying_2_dip"
+                        android:textSize="@dimen/woying_10_dip" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_study_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_study_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上次学习时间："
+                            android:textColor="@color/oder_state_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_study_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_study_time"
+                            android:textColor="@color/oder_state_color"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

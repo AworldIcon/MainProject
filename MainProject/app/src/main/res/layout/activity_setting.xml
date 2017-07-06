@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_set_color"
+    tools:context="com.coder.kzxt.setting.activity.SettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <ScrollView
+        android:id="@+id/my_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/scroll_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_set_color"
+            android:layout_marginTop="@dimen/woying_15_dip"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/set_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <!-- 个人信息 -->
+                <RelativeLayout
+                    android:id="@+id/presonal_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_45_dip"
+                    android:background="@drawable/ripple_orange">
+
+                    <TextView
+                        android:id="@+id/tv_personal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/woying_15_dip"
+                        android:text="@string/personal_info"
+                        android:textColor="@color/font_dark_black2"
+                        android:textSize="@dimen/woying_14_dip" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/woying_20_dip"
+                        android:src="@drawable/sliding_jiantou" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/iv_setting_line_arrow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/presonal_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:background="@color/gray_line" />
+                <!-- 账号管理 -->
+                <RelativeLayout
+                    android:id="@+id/account_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_45_dip"
+                    android:layout_below="@+id/iv_setting_line_arrow"
+                    android:background="@drawable/ripple_orange">
+
+                    <TextView
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/woying_15_dip"
+                        android:text="@string/account_manager"
+                        android:textColor="@color/font_dark_black2"
+                        android:textSize="@dimen/woying_14_dip" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/woying_20_dip"
+                        android:src="@drawable/sliding_jiantou" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- 通知设置 -->
+            <RelativeLayout
+                android:id="@+id/notification_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@id/set_layout"
+                android:layout_marginTop="@dimen/woying_15_dip"
+                android:visibility="gone"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/tv_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/message_notification"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+
+            <!-- line -->
+            <View
+                android:id="@+id/iv_setting_line3_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/cache_cleaner_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line"
+                android:visibility="visible" />
+
+            <!-- 允许非wifi网络下载 -->
+            <RelativeLayout
+                android:id="@+id/allow_dowload_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@+id/iv_setting_line3_arrow"
+                android:layout_marginTop="@dimen/woying_15_dip"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/tv_wifi_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/allow_wifi_download"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/public_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip" />
+            </RelativeLayout>
+
+            <!-- line -->
+            <View
+                android:id="@+id/iv_setting_line4_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/allow_dowload_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line" />
+
+            <!-- 清除缓存 -->
+            <RelativeLayout
+                android:id="@+id/cache_cleaner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/tv_clear_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/clean_cache_title"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:src="@drawable/sliding_jiantou" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/iv_setting_line5_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/cache_cleaner_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line"
+                android:visibility="visible" />
+
+            <!-- 下载保存位置 -->
+            <RelativeLayout
+                android:id="@+id/dowload_save_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@+id/iv_setting_line5_arrow"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/dowload_address_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/dowload_address_text"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <TextView
+                    android:id="@+id/dowload_address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_50_dip"
+                    android:layout_marginLeft="@dimen/woying_90_dip"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <ImageView
+                    android:id="@+id/dowload_address_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+
+            <!-- line -->
+            <View
+                android:id="@+id/iv_setting_line7_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/dowload_save_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line" />
+
+            <!-- 检查更新 -->
+            <RelativeLayout
+                android:id="@+id/check_version_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@id/iv_setting_line7_arrow"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/check_version_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/check_version_title"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <TextView
+                    android:id="@+id/current_version_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_90_dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/woying_50_dip"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+
+                <ImageView
+                    android:id="@+id/iv_setting_version_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+            <!-- 帮助与反馈 -->
+            <RelativeLayout
+                android:id="@+id/help_ticking_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@id/cache_cleaner_layout"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/woying_15_dip"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/tv_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/opinion"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+            <!-- line -->
+            <View
+                android:id="@+id/iv_setting_line6_arrow"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/help_ticking_layout"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:background="@color/gray_line" />
+            <!--关于我赢职场-->
+            <RelativeLayout
+                android:id="@+id/about_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:layout_below="@id/iv_setting_line6_arrow"
+                android:background="@drawable/ripple_orange">
+
+                <TextView
+                    android:id="@+id/tv_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/about"
+                    android:textColor="@color/font_dark_black2"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_20_dip"
+                    android:src="@drawable/sliding_jiantou" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/woying_38_dip"
+                android:layout_below="@+id/about_layout"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginRight="@dimen/woying_15_dip"
+                android:layout_marginTop="@dimen/woying_30_dip"
+                android:layout_marginBottom="@dimen/woying_30_dip"
+                android:background="@drawable/round_white_back"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/btn_login_out"
+                android:textColor="@color/bg_red"
+                android:textSize="@dimen/woying_14_dip" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

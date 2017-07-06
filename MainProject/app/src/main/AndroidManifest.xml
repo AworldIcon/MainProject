@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coder.kzxt.activity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 高度定位需要运行时注册的权限 -->
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.coder.kzxt.activity" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.coder.kzxt.activity"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name="com.coder.kzxt.utils.MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Toolbar">
+
+        <!-- 高德定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="db778d16450904ac304b69fe9a6d4c1e" />
+
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- 您从百度网站获取的APP KEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="" /> <!-- abcd1234 -->
+        <!-- 渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="ceshi" />
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+
+
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="true" />
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" />
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="com.coder.kzxt.broadcast.BaiduMessageReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push service -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <meta-data
+            android:name="api_key"
+            android:value="QcssBdSfLybYILNpWIDOls5v" />
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.coder.kzxt.activity.bdpush"
+            android:exported="true"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.coder.kzxt.activity" />
+        <!-- service end -->
+
+
+        <!-- 腾讯im通知 -->
+        <!-- 消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <!-- 腾讯im通知结束 -->
+
+
+        <!-- android:name="com.coder.kzxt.main.activity.Login" -->
+
+        <activity
+            android:name="com.coder.kzxt.main.activity.WelcomeActivity"
+            android:theme="@style/FullScreenStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- shareSDK     添加activity信息（注意：tencent后面的appid要保持和您配置的QQ的appid一致） -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.coder.kzxt.base.activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.TeaWorkRecourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.PublishWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.SingleChoiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.QuestionDetermineActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.QuestionFillActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.QuestionEssayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.QuestionBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.MyWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.BuildNewWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.PublishWorkTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.CheckStuWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.setting.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.stuwork.activity.TestPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.stuwork.activity.AnswerCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.stuwork.activity.StuCourseWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.webview.activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <!-- 海报模块 -->
+        <activity
+            android:name="com.coder.kzxt.poster.activity.PosterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.poster.activity.SearchPosterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.poster.activity.Posters_Particulars_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.coder.kzxt.poster.activity.PublishImagePosterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.poster.activity.MyPosterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.poster.activity.PublishTextPosterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 登录相关 -->
+        <activity
+            android:name="com.coder.kzxt.login.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.RegisterEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.RegisterPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.CheckCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.RegisterThirdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.information.activity.InformationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.webview.activity.TextView_Link_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.LoginPhoneFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name="com.coder.kzxt.login.activity.LoginEmailFirstActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.coder.kzxt.login.activity.YunLoginActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.coder.kzxt.login.activity.CreateLocalActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.coder.kzxt.login.activity.RelateLocalActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.coder.kzxt.login.activity.UnbindLocalActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.coder.kzxt.main.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.coder.kzxt.main.activity.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.BindSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.BindEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.UserInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.login.activity.EditInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 账号安全 -->
+        <activity
+            android:name="com.coder.kzxt.login.activity.AccountSafeActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <!-- 版本升级service -->
+        <service android:name="com.coder.kzxt.download.NotificationUpdateService" />
+
+        <activity
+            android:name="com.coder.kzxt.poster.activity.Posters_All_like_User_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.poster.activity.Show_Image_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.video.activity.VideoViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.coder.kzxt.setting.activity.MyAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.setting.activity.AddressEditActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 我的课程 -->
+        <activity
+            android:name="com.coder.kzxt.course.activity.CourseListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.GoodCourseActivity"
+            android:screenOrientation="portrait" />
+        <!-- 通知设置 -->
+        <activity
+            android:name="com.coder.kzxt.setting.activity.NotifySettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.gambit.activity.PublishGambitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.gambit.activity.MyGambitsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.gambit.activity.ClassGambitParticularsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页搜索全部 -->
+        <activity
+            android:name="com.coder.kzxt.main.activity.SearchAllActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级详情 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassParticularsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 问答模块 -->
+        <activity
+            android:name="com.coder.kzxt.question.activity.MyQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.question.activity.QuestionDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 班級課程 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassCourseActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级课程表 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.CourseTableActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级相册 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassPhotoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级文件 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassFileActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级成员列表 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.gambit.activity.ClassGambitsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.gambit.activity.ViewPagePicsNetAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.gambit.activity.GambitReplyParticularsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.download.VideoView_Download_Activity"
+            android:screenOrientation="portrait" />
+        <!-- 班级申请列表 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ApplyListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 班级设置 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassSettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 申请加入班级成员信息 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ApplyMemberInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.download.Download_Center_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.download.Download_ExpandableList_Activity"
+            android:screenOrientation="portrait" />
+
+        <!-- 课程模块 -->
+        <activity
+            android:name="com.coder.kzxt.course.activity.LocalCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.SearchLocalCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.download.DownloadServiceVideoActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.coder.kzxt.download.DownloadService">
+            <intent-filter>
+                <action android:name="HBSI.download.service.action" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.coder.kzxt.course.activity.LearnCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.TeachingCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.CourseSynopsisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.CheckWorkCalssActivity"
+            android:screenOrientation="portrait" />
+        <!-- 忘记密码 -->
+        <activity
+            android:name="com.coder.kzxt.login.activity.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name="com.coder.kzxt.course.activity.LiveLesson_Course_Activity" /> -->
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.TeaSearchWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.buildwork.activity.TeaSearchStuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.TeacherBriefActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 消息通知 -->
+        <activity
+            android:name="com.coder.kzxt.message.activity.MessageMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.NotificationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.NotificationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.NotificationReadNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.SendNotificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.ChatDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.FunctionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.ManagerTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.ManagerStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.message.activity.ChatPersonActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 修改账号 -->
+        <activity
+            android:name="com.coder.kzxt.login.activity.ChangeAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.stuwork.activity.StuUnCheckWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.PostCourseCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.stuwork.activity.StuSearchWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.LiveCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.LiveSynopsisActivity"
+            android:screenOrientation="portrait" />
+        <!-- 订单确认 -->
+        <activity
+            android:name="com.coder.kzxt.order.activity.OrderConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 订单详情 -->
+        <activity
+            android:name="com.coder.kzxt.order.activity.OrderDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 我的订单 -->
+        <activity
+            android:name="com.coder.kzxt.order.activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- H5手机网页版支付 保留用 -->
+        <activity
+            android:name="cc.pay.sdk.utils.alipay.H5PayDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- 订单搜索 -->
+        <activity
+            android:name="com.coder.kzxt.order.activity.OrderSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- VR播放 -->
+        <activity
+            android:name="com.coder.kzxt.video.activity.VrVideoActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.coder.kzxt.video.activity.VideoLiveActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 问答模块 -->
+        <activity
+            android:name="com.coder.kzxt.question.activity.CourseQuestionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.question.activity.PublishQuestionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coder.kzxt.question.activity.QuestionsDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.coder.kzxt.course.activity.SearchLiveListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.video.activity.LiveReplayPlayActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- <activity android:name="com.coder.kzxt.course.activity.SearchVideoListActivity" /> -->
+        <!-- 签到相关 -->
+        <activity
+            android:name="com.coder.kzxt.sign.activity.SignMainTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.SignHistoryListTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.SignDetailListTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.SignMainStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.SignDetailStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.SignHistoryListStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.MarkStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.MapTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.sign.activity.MapStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.question.activity.QuestionsReplyPublishActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name="com.coder.kzxt.course.activity.CourseBelowLiveActivity" /> -->
+        <activity
+            android:name="com.coder.kzxt.question.activity.QuestionReplyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.main.activity.SearchAllCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.setting.activity.AboutusActivity"
+            android:screenOrientation="portrait" />
+        <!-- 扫码加班 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.QrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ScanClassActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ScanQrcodePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ShareClassQrcode"
+            android:screenOrientation="portrait" />
+        <!-- 班级圈 -->
+        <activity
+            android:name="com.coder.kzxt.classe.activity.MyClassStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.FindClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.CreateClassActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.JoinLimitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.SearchClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassAnnounceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.JoinCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ClassTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.PublicTopicActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.TopicDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.SearchAddClassMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.OrganizationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.SpaceImageDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.classe.activity.ShowImageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 服务相关 -->
+        <activity
+            android:name="com.coder.kzxt.service.activity.ServiceMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.service.activity.ServiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.service.activity.SearchServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.service.activity.MyServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.service.activity.FindJobActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.service.activity.FindJobActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coder.kzxt.service.activity.FindJobActivity3"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.coder.kzxt.message.activity.NotificationClassActivity" />
+        <activity android:name="com.coder.kzxt.login.activity.TencentLoginActivity" />
+        <activity android:name="com.coder.kzxt.login.activity.BindSelfAccountActivity" />
+        <activity android:name="com.coder.kzxt.login.activity.SocialAccountActivity"></activity>
+    </application>
+
+</manifest>

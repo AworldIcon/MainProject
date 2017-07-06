@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bg_white"
+              android:orientation="horizontal"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/all_ly"
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/woying_10_dip"
+        android:background="@drawable/ripple_orange"
+        >
+
+        <ImageView
+            android:id="@+id/course_img"
+            android:layout_width="@dimen/woying_160_dip"
+            android:layout_height="@dimen/woying_90_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/my_course_def"
+            />
+
+        <TextView
+            android:id="@+id/live_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="授课数据库"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip"
+            />
+
+        <TextView
+            android:id="@+id/host_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:text="授课数据库"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/all_ly1"
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_10_dip"
+        android:paddingRight="@dimen/woying_10_dip"
+        android:paddingTop="@dimen/woying_10_dip"
+        android:background="@drawable/ripple_orange"
+        >
+
+        <ImageView
+            android:id="@+id/course_img1"
+            android:layout_width="@dimen/woying_160_dip"
+            android:layout_height="@dimen/woying_90_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/my_course_def"
+            />
+
+        <TextView
+            android:id="@+id/live_name_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="授课数据库"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_14_dip"
+            />
+
+        <TextView
+            android:id="@+id/host_name_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_4_dip"
+            android:text="授课数据库"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/woying_12_dip"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

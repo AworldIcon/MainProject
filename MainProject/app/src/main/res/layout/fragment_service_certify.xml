@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_10_dip">
+
+
+        <TextView
+            android:id="@+id/form"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/woying_40_dip"
+            android:background="@color/bg_white"
+            android:gravity="center"
+            android:text="填写就业登记表"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

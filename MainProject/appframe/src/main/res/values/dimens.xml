@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="custom_dialog_width">250dp</dimen>
+    <dimen name="custom_dialog_http">150dp</dimen>
+    <dimen name="custom_dialog_title_height">36dp</dimen>
+    <dimen name="custom_dialog_message_min_height">90dp</dimen>
+    <dimen name="custom_dialog_bottom_height">36dp</dimen>
+
+
+    <dimen name="font_mini">10dp</dimen>
+    <dimen name="font_small">12dp</dimen>
+    <dimen name="font_normal">14dp</dimen>
+    <dimen name="font_big">16dp</dimen>
+
+
+</resources>

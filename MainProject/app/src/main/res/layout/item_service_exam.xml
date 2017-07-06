@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/woying_10_dip"
+    android:background="@drawable/round_gray">
+
+    <View
+        style="@style/grayHorizontallLine"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/woying_10_dip"
+        style="@style/font_normal"
+        android:text="考试信息"
+        />
+
+    <View
+        style="@style/grayHorizontallLine"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="科目"
+            style="@style/font_normal"
+
+            />
+
+        <TextView
+            android:id="@+id/testName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+    </TableRow>
+
+    <View
+        style="@style/grayHorizontallLine"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/time"
+            style="@style/font_normal"
+
+            />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+    </TableRow>
+
+    <View
+        style="@style/grayHorizontallLine"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/area"
+            style="@style/font_normal"
+
+            />
+
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+    </TableRow>
+
+    <View
+        style="@style/grayHorizontallLine"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/notice_message"
+            style="@style/font_normal"
+
+            />
+
+        <TextView
+            android:id="@+id/notice_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+    </TableRow>
+</TableLayout>

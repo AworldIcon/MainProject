@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/left_Image"
+            android:layout_width="@dimen/woying_32_dip"
+            android:layout_height="@dimen/woying_32_dip"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/woying_10_dip"
+            android:background="@drawable/left_back_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:text="@string/sign_twocode"
+            android:textColor="@color/font_white" />
+
+        <ImageView
+            android:id="@+id/iv_flash_light"
+            android:layout_width="@dimen/woying_32_dip"
+            android:layout_height="@dimen/woying_32_dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/woying_10_dip"
+            android:background="@drawable/close_flash_lamp" />
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="5dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="30dip"
+            android:layout_weight="0.4"
+            android:textColor="@color/font_blue"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="4dip"
+                android:layout_marginTop="4dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/class_time" />
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_book_name"
+                    android:paddingLeft="5dip"
+                    android:textColor="@color/font_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_lin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_book_name"
+                    android:textColor="@color/font_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_book_name"
+                    android:textColor="@color/font_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/class_location" />
+
+                <TextView
+                    android:id="@+id/tv_class_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_time"
+                    android:paddingLeft="5dip"
+                    android:textColor="@color/font_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/class_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line" />
+</LinearLayout>
+

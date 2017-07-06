@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_orange"
+    >
+
+    <RelativeLayout
+        android:id="@+id/download_centre_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/download_centre_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/woying_90_dip"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/download_centre_course_img"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/woying_70_dip"
+                android:layout_marginBottom="@dimen/woying_10_dip"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/my_course_def" />
+
+            <RelativeLayout
+                android:id="@+id/download_centre_course_info"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/woying_10_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_8_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/download_centre_course_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_5_dip"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <RelativeLayout
+                    android:id="@+id/download_centre_detailedness_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/woying_15_dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/download_centre_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/disk_downloadimg" />
+
+                    <TextView
+                        android:id="@+id/download_centre_number_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/woying_6_dip"
+                        android:layout_toRightOf="@+id/download_centre_img"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/woying_10_dip" />
+
+                    <ImageView
+                        android:id="@+id/download_centre_red_img"
+                        android:layout_width="@dimen/woying_5_dip"
+                        android:layout_height="@dimen/woying_5_dip"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/woying_3_dip"
+                        android:layout_toRightOf="@id/download_centre_number_text"
+                        android:src="@drawable/no_read_msg"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/boutique_course_fenge_view"
+                    android:layout_width="1px"
+                    android:layout_height="@dimen/woying_15_dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:layout_toRightOf="@id/download_centre_detailedness_layout"
+                    android:background="@color/gray_line" />
+
+                <RelativeLayout
+                    android:id="@+id/download_centre_mb_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/woying_15_dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/woying_10_dip"
+                    android:layout_toRightOf="@id/boutique_course_fenge_view">
+
+                    <ImageView
+                        android:id="@+id/download_centre_mb_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/down_centre_mb"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/download_centre_mb_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/woying_10_dip" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/download_centre_info_layout"
+            android:layout_marginLeft="@dimen/woying_15_dip"
+            android:background="@color/gray_line" />
+    </RelativeLayout>
+
+</RelativeLayout>

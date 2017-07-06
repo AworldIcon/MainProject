@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/ripple_orange"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:padding="@dimen/woying_10_dip">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/woying_50_dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/videoName"
+            style="@style/font_normal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""/>
+
+
+        <TextView
+            android:id="@+id/videoLength"
+            style="@style/font_gray_small_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/videoImage"
+        android:layout_width="@dimen/woying_30_dip"
+        android:layout_height="@dimen/woying_30_dip"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:padding="@dimen/woying_6_dip"
+        android:scaleType="centerCrop"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/woying_30_dip"
+        android:layout_height="@dimen/woying_30_dip"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/service_video_downloading"
+        android:padding="@dimen/woying_6_dip"
+        android:visibility="gone"/>
+
+</LinearLayout>

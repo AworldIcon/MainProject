@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_light_gray">
+
+    <RelativeLayout
+        android:id="@+id/download_child_item_zong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_45_dip">
+
+        <ProgressBar
+            android:id="@+id/video_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/download_progress_style" />
+
+        <CheckBox
+            android:id="@+id/video_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="@dimen/woying_225_dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_6_dip"
+            android:layout_toRightOf="@+id/video_check"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/woying_13_dip" />
+
+        <RelativeLayout
+            android:id="@+id/button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_12_dip">
+
+            <ImageView
+                android:id="@+id/video_button_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/download_button_paly"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/video_button_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/download_button_down" />
+
+            <ImageView
+                android:id="@+id/video_button_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/download_button_wait"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/video_button_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/download_button_stop"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/video_size_or_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_12_dip"
+            android:layout_toLeftOf="@+id/button_layout"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_10_dip" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

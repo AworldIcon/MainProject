@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/username"/>
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请填写你的真实姓名"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/sex"/>
+
+            <TextView
+                android:id="@+id/sex"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:drawableRight="@drawable/department_down"
+                android:gravity="center_vertical"
+                android:hint="男/女"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingRight="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/phone"/>
+
+            <EditText
+                android:id="@+id/phone"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/email"/>
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请输入邮箱"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/ssdk_qq"/>
+
+            <EditText
+                android:id="@+id/qq"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请输入QQ号"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/birthDay"/>
+
+            <TextView
+                android:id="@+id/birthday"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:drawableRight="@drawable/department_down"
+                android:gravity="center_vertical"
+                android:text="1990-1-1"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingRight="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                 />
+
+            <TextView
+                style="@style/font_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:drawableRight="@drawable/red_star"
+                android:padding="@dimen/woying_10_dip"
+                android:text="@string/card_id"/>
+
+            <EditText
+                android:id="@+id/cardId"
+                style="@style/font_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:background="@drawable/round_gray1"
+                android:hint="请输入身份证号码"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingTop="4dp"
+                android:text=""/>
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/woying_40_dip"
+                android:layout_margin="@dimen/woying_30_dip"
+                android:background="@drawable/round_huang3_loginsetting"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_16_dip"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

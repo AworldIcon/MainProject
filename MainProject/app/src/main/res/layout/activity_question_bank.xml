@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_question_bank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    tools:context="com.coder.kzxt.buildwork.activity.QuestionBankActivity">
+    <include
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/titlebar_default" />
+    <LinearLayout
+        android:id="@+id/title_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_50_dip"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:layout_below="@+id/title_layout"
+        >
+        <RelativeLayout
+            android:id="@+id/work_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/type_text_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                >
+                <TextView
+                    android:id="@+id/type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_type"
+                    android:textSize="@dimen/woying_12_dip"
+                    android:textColor="@color/font_black"
+                    android:layout_marginTop="@dimen/woying_18_dip"
+                    />
+                <ImageView
+                    android:id="@+id/jiantou_imag"
+                    android:layout_width="@dimen/woying_10_dip"
+                    android:layout_height="@dimen/woying_6_dip"
+                    android:src="@drawable/work_bank_jiantou"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/jiantou_image"
+                android:layout_width="@dimen/woying_14_dip"
+                android:layout_height="@dimen/woying_14_dip"
+                android:layout_toRightOf="@+id/type_text_lay"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_3_dip"
+                android:src="@drawable/time_down"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/woying_1_dip"
+            android:layout_height="wrap_content"
+            android:background="@color/font_gray"/>
+        <RelativeLayout
+            android:id="@+id/diffcult_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            >
+            <TextView
+                android:id="@+id/diffcult_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="难度"
+                android:textSize="@dimen/woying_12_dip"
+                android:textColor="@color/font_black"
+                android:layout_centerInParent="true"
+                />
+            <ImageView
+                android:id="@+id/jiantou_image1"
+                android:layout_width="@dimen/woying_14_dip"
+                android:layout_height="@dimen/woying_14_dip"
+                android:layout_toRightOf="@+id/diffcult_text"
+                android:layout_marginLeft="@dimen/woying_3_dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/time_down"
+                />
+            <ImageView
+                android:id="@+id/jiantou_imag1"
+                android:layout_width="@dimen/woying_10_dip"
+                android:layout_height="@dimen/woying_6_dip"
+                android:src="@drawable/work_bank_jiantou"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_type">
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.coder.kzxt.recyclerview.MyPullRecyclerView>
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+
+    <LinearLayout
+        android:id="@+id/no_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/no_info_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/no_questionbank" />
+
+        <TextView
+            android:id="@+id/no_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="8dip"
+            android:text="@string/no_info_work"
+            android:textColor="@color/font_black"
+            android:textSize="14dip" />
+    </LinearLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        layout="@layout/loading" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        layout="@layout/load_fail" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        layout="@layout/empty_view" />
+</RelativeLayout>

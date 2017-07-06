@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <RelativeLayout
+        android:id="@+id/top_ly"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/trans_half"
+        >
+
+    <ImageButton
+        android:id="@+id/live_share_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/live_share"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/woying_26_dip"
+        android:layout_height="@dimen/woying_26_dip"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/video_back"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    </RelativeLayout>
+</RelativeLayout>

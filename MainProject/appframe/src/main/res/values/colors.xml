@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--这里不要在定义颜色值-->
+
+
+    <color name="colorPrimary">#cb151d</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 通用 -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_line">#f0f0f0</color>
+
+    <!-- 字体颜色 -->
+    <color name="font_black">#141414</color>
+    <color name="font_dark_black">#3e3a39</color>
+    <color name="font_light_black">#898989</color>
+    <color name="font_white">#FFFFFFFF</color>
+    <color name="font_red">#FFcb151d</color>
+    <color name="font_green">#5bc106</color>
+    <color name="font_orange">#f3872e</color>
+    <color name="font_blue">#3BA0FE</color>
+    <color name="font_pink">#FF69B4</color>
+    <color name="font_gray">#747474</color>
+    <color name="font_light_gray">#acacac</color>
+    <color name="font_dark_gray">#979797</color>
+    <!-- 背景色 -->
+    <color name="background_gray">#f0eff5</color>
+    <color name="background_light_gray">#F8F8F8</color>
+    <color name="background_dark_gray">#FFe0e0e0</color>
+    <color name="background_red">#FFcb151d</color>
+    <color name="background_blue">#009DE3</color>
+    <color name="background_green">#5bc106</color>
+    <color name="background_orange">#f3872e</color>
+    <color name="background_line">#F0F2F6</color>
+
+</resources>

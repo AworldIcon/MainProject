@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/order_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/order_course_top_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_class_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_below="@+id/order_top_layout"
+        android:background="@drawable/ripple_orange"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="@dimen/woying_4_dip"
+            android:layout_height="@dimen/woying_20_dip"
+            android:layout_centerVertical="true"
+            android:background="@color/first_theme" />
+
+        <TextView
+            android:id="@+id/tv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:gravity="center_vertical"
+            android:text="@string/tea_class"
+            android:textColor="@color/order_address_color"
+            android:textSize="@dimen/woying_12_dip" />
+
+        <TextView
+            android:id="@+id/tv_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_40_dip"
+            android:layout_toRightOf="@id/tv_class"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/order_address_color"
+            android:textSize="@dimen/woying_12_dip" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:src="@drawable/department_go" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

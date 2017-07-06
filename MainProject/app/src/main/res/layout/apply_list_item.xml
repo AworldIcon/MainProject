@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_badge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/woying_8_dip"
+                android:layout_marginLeft="@dimen/woying_15_dip"
+                android:layout_marginTop="@dimen/woying_8_dip"
+                android:src="@drawable/myclassbadge" />
+
+            <TextView
+                android:id="@+id/tv_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_30_dip"
+                android:layout_toRightOf="@id/iv_badge"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_16_dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/iv_badge"
+                android:background="@color/gray_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/woying_70_dip"
+            android:layout_below="@id/rl_badge"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/woying_40_dip"
+                android:layout_height="@dimen/woying_40_dip"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginTop="@dimen/woying_8_dip"
+                android:src="@drawable/default_me_myimg" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:layout_toRightOf="@id/iv_head"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip" />
+
+
+            <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_user_name"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:layout_marginTop="@dimen/woying_4_dip"
+                android:layout_toRightOf="@id/tv_user_name"
+                android:src="@drawable/user_female" />
+
+
+            <TextView
+                android:id="@+id/tv_aduit_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_marginLeft="@dimen/woying_5_dip"
+                android:layout_marginTop="@dimen/woying_5_dip"
+                android:layout_toRightOf="@id/iv_head"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_toaudit_bottom"
+            android:layout_width="@dimen/woying_100_dip"
+            android:layout_height="@dimen/woying_70_dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_refused"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:layout_toLeftOf="@+id/iv_toaudit_bottom"
+                android:clickable="true"
+                android:drawablePadding="@dimen/woying_5_dip"
+                android:drawableTop="@drawable/audit_buttonrefused"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/refuse"
+                android:textColor="@color/font_red"
+                android:textSize="@dimen/woying_14_dip" />
+
+            <ImageView
+                android:id="@+id/iv_toaudit_bottom"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/woying_8_dip"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:layout_marginTop="@dimen/woying_8_dip"
+                android:layout_toLeftOf="@+id/tv_button_agree"
+                android:background="@color/font_black" />
+
+            <TextView
+                android:id="@+id/tv_button_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:clickable="true"
+                android:drawablePadding="@dimen/woying_5_dip"
+                android:drawableTop="@drawable/audit_buttonagree"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/agree"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/woying_14_dip" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/rl_top"
+        android:layout_marginLeft="@dimen/woying_55_dip"
+        android:background="@color/gray_line" />
+
+</RelativeLayout>

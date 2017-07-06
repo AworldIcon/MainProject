@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <item
+        android:id="@+id/action_del"
+        android:title="删除"
+        app:showAsAction="never"
+        android:icon="@drawable/posters_del"
+        />
+    <item
+        android:id="@+id/action_report"
+        android:title="举报"
+        app:showAsAction="never"
+        android:icon="@drawable/posters_report"
+        />
+
+</menu>

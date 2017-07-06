@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_orange"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="@dimen/woying_40_dip"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_margin="@dimen/woying_10_dip"
+        android:src="@drawable/default_teacher_header"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/font_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/head"
+        android:layout_toRightOf="@+id/head"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/mark"
+        style="@style/font_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/head"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:text="@string/mark"
+        android:textColor="@color/first_theme"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/font_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/head"
+        android:layout_toRightOf="@+id/head"
+        android:text=""/>
+
+
+    <TextView
+        android:id="@+id/status_mark"
+        style="@style/font_gray_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/head"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_toRightOf="@+id/status"
+        android:text=""/>
+
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/font_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/head"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:text=""/>
+
+    <com.coder.kzxt.recyclerview.MyRecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        app:layoutManagerType="grid_layout"
+        android:paddingLeft="@dimen/woying_10_dip"
+        android:paddingRight="@dimen/woying_10_dip"
+        android:paddingBottom="@dimen/woying_10_dip"
+        app:spanCount="5"
+        />
+</RelativeLayout>

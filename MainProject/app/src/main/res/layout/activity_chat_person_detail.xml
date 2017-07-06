@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/mainView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_gray"
+              android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip">
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="@dimen/woying_40_dip"
+            android:layout_height="@dimen/woying_40_dip"
+            android:layout_marginBottom="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_10_dip"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:text=""
+            />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_4_dip"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/phone_new_number"/>
+
+        <TextView
+            android:id="@+id/phone"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/email"/>
+
+        <TextView
+            android:id="@+id/email"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/birthDay"/>
+
+        <TextView
+            android:id="@+id/birthday"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/personal_profile"/>
+
+        <TextView
+            android:id="@+id/desc"
+            style="@style/font_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/send_message"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_marginLeft="@dimen/woying_15_dip"
+        android:layout_marginRight="@dimen/woying_15_dip"
+        android:layout_marginBottom="@dimen/woying_40_dip"
+        android:background="@drawable/round_huang3_loginsetting"
+        android:text="@string/send_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/woying_16_dip"
+        android:visibility="gone"/>
+
+</LinearLayout>

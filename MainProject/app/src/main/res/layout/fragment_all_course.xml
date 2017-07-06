@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/course_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    tools:context="com.coder.kzxt.main.fragment.AllCourseFragment">
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/facultyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="always">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.coder.kzxt.views.RecyclerViewHeader
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/head_view"
+                    layout="@layout/seach_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.coder.kzxt.views.RecyclerViewHeader>
+        </RelativeLayout>
+
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myPullSwipeRefresh" />
+
+    <include
+        layout="@layout/load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myPullSwipeRefresh" />
+
+    <include
+        layout="@layout/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myPullSwipeRefresh" />
+
+</RelativeLayout>
+

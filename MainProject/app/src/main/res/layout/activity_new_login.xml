@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    <ScrollView
+        android:id="@+id/scollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:id="@+id/login_info_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="@dimen/woying_70_dip"
+                android:layout_height="@dimen/woying_70_dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:background="@drawable/login_default_icon"/>
+
+            <RelativeLayout
+                android:id="@+id/login_body_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_head"
+                android:layout_marginTop="@dimen/woying_20_dip"
+                android:background="@color/bg_register_color">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5px"
+                    android:background="@color/bg_login_color"/>
+
+                <RelativeLayout
+                    android:id="@+id/login_body_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_40_dip"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_login_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/woying_25_dip"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/input_phone_email_studnum_hint"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/woying_1_dip"
+                            android:textColor="@color/font_black"
+                            android:textColorHint="@color/font_dark_gray"
+                            android:textSize="@dimen/woying_14_dip"/>
+
+                        <RelativeLayout
+                            android:id="@+id/delete_login"
+                            android:layout_width="@dimen/woying_30_dip"
+                            android:layout_height="@dimen/woying_30_dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/woying_15_dip"
+                            android:clickable="true"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/login_delete"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/iv_login_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/woying_15_dip"
+                        android:layout_marginRight="@dimen/woying_15_dip"
+                        android:background="@color/bg_login_color"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/login_body_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_40_dip"
+                    android:layout_below="@+id/login_body_layout1"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_login_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/woying_25_dip"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/woying_1_dip"
+                            android:textColor="@color/font_black"
+                            android:textColorHint="@color/font_dark_gray"
+                            android:textSize="@dimen/woying_14_dip"/>
+
+                        <RelativeLayout
+                            android:id="@+id/open_password_rl"
+                            android:layout_width="@dimen/woying_30_dip"
+                            android:layout_height="@dimen/woying_30_dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/woying_15_dip"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:id="@+id/open_password"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/close_password"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/iv_pwd_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/bg_login_color"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_auth_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_40_dip"
+                    android:layout_below="@+id/login_body_layout2"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5px"
+                        android:layout_marginLeft="@dimen/woying_15_dip"
+                        android:layout_marginRight="@dimen/woying_15_dip"
+                        android:background="@color/bg_login_color"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_auth_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/woying_25_dip"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/input_auth_code_hint"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/woying_1_dip"
+                            android:singleLine="true"
+                            android:textColor="@color/font_black"
+                            android:textColorHint="@color/font_dark_gray"
+                            android:textSize="@dimen/woying_14_dip"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_code"
+                            android:layout_width="@dimen/woying_70_dip"
+                            android:layout_height="@dimen/woying_35_dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/woying_15_dip"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_auth_code"
+                                android:layout_width="@dimen/woying_70_dip"
+                                android:layout_height="@dimen/woying_35_dip"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/bg_login_color"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_body_layout">
+
+                <TextView
+                    android:id="@+id/forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:clickable="true"
+                    android:text="@string/forget_password"
+                    android:textColor="@color/first_theme"
+                    android:textSize="@dimen/woying_15_dip"/>
+
+                <Button
+                    android:id="@+id/btn_login_submit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/woying_40_dip"
+                    android:layout_below="@id/forget_password"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:layout_marginRight="@dimen/woying_15_dip"
+                    android:layout_marginTop="@dimen/woying_10_dip"
+                    android:background="@drawable/round_huang3_loginsetting"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/woying_16_dip"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_login_submit"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/woying_15_dip"
+                    android:clickable="true"
+                    android:text="@string/register"
+                    android:textColor="@color/first_theme"
+                    android:textSize="@dimen/woying_16_dip"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_party_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_160_dip"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/login_register"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/woying_10_dip"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/woying_10_dip"
+                android:paddingRight="@dimen/woying_10_dip">
+
+                <LinearLayout
+                    android:id="@+id/third_party_login_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_20_dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/woying_15_dip"
+                        android:layout_weight="1"
+                        android:background="@color/font_gray"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/woying_15_dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="更多登录方式"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/woying_12_dip"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/font_gray"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/third_party_login_ll"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/woying_20_dip"
+                    android:paddingRight="@dimen/woying_20_dip">
+
+                    <RelativeLayout
+                        android:id="@+id/qq_login_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/woying_10_dip"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/qq_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/woying_10_dip"
+                            android:drawableTop="@drawable/qq_default_icon"
+                            android:gravity="center"
+                            android:text="QQ登录"
+                            android:textColor="@color/font_gray"
+                            android:textSize="@dimen/woying_12_dip"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wx_login_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/woying_10_dip"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/wx_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/woying_10_dip"
+                            android:drawableTop="@drawable/weixin_default_icon"
+                            android:gravity="center"
+                            android:text="@string/wechat"
+                            android:textColor="@color/font_gray"
+                            android:textSize="@dimen/woying_12_dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

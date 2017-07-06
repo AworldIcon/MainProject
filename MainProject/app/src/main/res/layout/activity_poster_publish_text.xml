@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coder.kzxt.views.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/my_layout"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+                                   android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <LinearLayout
+        android:id="@+id/my_srcoll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/bg_gray"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/posters_text_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/posters_type_ed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/woying_134_dip"
+                android:background="#c24a02"
+                android:gravity="left|top"
+                android:hint="@string/input_poster_content"
+                android:maxLength="500"
+                android:padding="@dimen/woying_10_dip"
+                android:textColor="@color/font_white"
+                android:textColorHint="@color/font_white"
+                android:textSize="@dimen/woying_12_dip"
+                />
+
+            <TextView
+                android:id="@+id/cu_number_tx_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/woying_4_dip"
+                android:text="0"
+                android:textColor="@color/font_white"
+                android:layout_toLeftOf="@+id/all_num_tx"
+                android:textSize="@dimen/woying_10_dip"/>
+
+            <TextView
+                android:id="@+id/all_num_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/woying_4_dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/woying_10_dip"
+                android:text="/500"
+                android:textColor="@color/font_white"
+                android:textSize="@dimen/woying_10_dip"/>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/font_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/select_base_color"
+            android:drawablePadding="@dimen/woying_6_dip"
+            android:padding="@dimen/woying_10_dip"
+            android:text="@string/change_text_bg"/>
+
+        <com.coder.kzxt.recyclerview.MyRecyclerView
+            android:id="@+id/horizontalListView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_100_dip"
+            android:background="@color/white"
+            app:divider_decoration_height="0"
+            app:layoutManagerType="linear_horizontal"
+            />
+
+        <TextView
+            style="@style/font_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_10_dip"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/select_poster_style"
+            android:drawablePadding="@dimen/woying_6_dip"
+            android:padding="@dimen/woying_10_dip"
+            android:text="@string/choice_poster_type"/>
+
+        <RelativeLayout
+            android:id="@+id/classify_banner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/woying_10_dip"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/classify_banner_normaltheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/woying_10_dip"
+                android:orientation="vertical"
+                >
+                <com.coder.kzxt.views.AutoScrollViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/viewGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+
+                    android:layout_marginBottom="@dimen/woying_5_dip"
+                    android:orientation="horizontal"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</com.coder.kzxt.views.ResizeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/woying_50_dip"
+        android:layout_height="@dimen/woying_20_dip"
+         android:background="@drawable/rectangle_first_theme_360"
+        android:gravity="center"
+        android:text="@string/about"
+        android:textColor="@color/first_theme"
+        android:textSize="@dimen/font_small"/>
+</LinearLayout>

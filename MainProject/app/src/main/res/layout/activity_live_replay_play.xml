@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_live_replay_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_gray"
+    tools:context="com.coder.kzxt.video.activity.LiveReplayPlayActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <RelativeLayout
+        android:id="@+id/video_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        >
+        <RelativeLayout
+            android:id="@+id/ssss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <RelativeLayout
+            android:id="@+id/view_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/lockImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:clickable="true"
+            android:src="@drawable/unlocked"
+            android:visibility="gone"
+            />
+
+        <com.coder.kzxt.video.activity.LiveMediaController
+            android:id="@+id/media_controller_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            />
+
+        <ImageView
+            android:id="@+id/buffer_bj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ProgressBar
+            android:id="@+id/loading_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+        <RelativeLayout
+            android:id="@+id/video_top_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_ly_height"
+            android:orientation="horizontal"
+            android:background="@color/transparent"
+            >
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_8_dip"
+                android:src="@drawable/video_back"
+                android:padding="@dimen/woying_4_dip"
+                android:background="@color/transparent"
+                />
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_4_dip"
+                android:layout_marginRight="@dimen/woying_4_dip"
+                android:layout_toLeftOf="@+id/download_iv"
+                android:layout_toRightOf="@+id/img_back"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/font_white"
+                android:textSize="@dimen/woying_12_dip" />
+
+        </RelativeLayout>
+        <include layout="@layout/video_gesture"></include>
+        <include layout="@layout/video_volume"></include>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_30_dip"
+        android:background="@color/bg_white"
+        android:layout_below="@+id/video_ly"
+        >
+
+       <TextView
+           android:id="@+id/time_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="@dimen/woying_12_dip"
+           android:textColor="@color/font_gray"
+           android:text="历史直播时间：12:00-13:00"
+           android:layout_marginLeft="@dimen/woying_10_dip"
+           android:layout_centerVertical="true"
+           />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/time_ly"
+        >
+        <com.coder.kzxt.recyclerview.MyRecyclerView
+            android:id="@+id/replay_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:divider_decoration_height="0"
+            android:background="@color/white"
+            android:groupIndicator="@null"
+            android:scrollbars="none"
+            app:layoutManagerType="linear_vertical"
+            >
+        </com.coder.kzxt.recyclerview.MyRecyclerView>
+
+
+        <include layout="@layout/loading" />
+
+        <include layout="@layout/empty_view" />
+
+        <include layout="@layout/load_fail" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

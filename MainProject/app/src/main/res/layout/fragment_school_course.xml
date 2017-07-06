@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_layout"
+    android:background="@color/bg_white"
+    tools:context="com.coder.kzxt.course.fragment.SchoolCourseFragment">
+
+    <ExpandableListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:groupIndicator="@null"
+        android:scrollbars="none"
+        >
+    </ExpandableListView>
+
+    <include layout="@layout/loading" />
+
+    <include layout="@layout/empty_view" />
+
+    <include layout="@layout/load_fail" />
+
+
+</RelativeLayout>

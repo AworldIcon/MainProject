@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.main.fragment.PersonCentreFragment">
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.coder.kzxt.views.ObservableScrollView
+            android:id="@+id/my_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/scroll_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/user_img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/woying_110_dip">
+
+                        <com.coder.kzxt.views.HeaderWaveView
+                            android:id="@+id/header_wave_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_user_head"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+
+                            android:paddingLeft="@dimen/woying_10_dip"
+                            android:paddingRight="@dimen/woying_10_dip">
+
+                            <ImageView
+                                android:id="@+id/bg_user_image"
+                                android:layout_width="@dimen/woying_70_dip"
+                                android:layout_height="@dimen/woying_70_dip"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/user_head_bg" />
+
+                            <ImageView
+                                android:id="@+id/iv_user_head"
+                                android:layout_width="@dimen/woying_64_dip"
+                                android:layout_height="@dimen/woying_64_dip"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/woying_3_dip"
+                                android:background="@drawable/default_me_myimg" />
+
+                            <TextView
+                                android:id="@+id/user_img_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_user_head"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/woying_5_dip"
+                                android:duplicateParentState="true"
+                                android:maxLines="1"
+                                android:text="@string/myname"
+                                android:textColor="@color/font_white"
+                                android:textSize="@dimen/woying_12_dip" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_top_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rl_head_layout"
+                        android:layout_marginBottom="@dimen/woying_10_dip"
+                        android:visibility="gone"
+                        >
+
+                        <include
+                            layout="@layout/my_top_recycler_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/woying_10_dip"
+                    android:background="@color/gray_line" />
+
+                <include
+                    layout="@layout/my_bottom_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/my_bottom_recycler_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.coder.kzxt.views.ObservableScrollView>
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+</FrameLayout>

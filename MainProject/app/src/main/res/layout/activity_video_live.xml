@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_video_live"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+
+    <RelativeLayout
+        android:id="@id/title_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:background="@color/first_theme"
+        >
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_up"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/woying_14_dip"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/font_white"
+            />
+
+    </RelativeLayout>
+
+     <RelativeLayout
+        android:id="@+id/live_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_ly"
+        >
+            <!--直播播放器-->
+            <com.tencent.ilivesdk.view.AVRootView
+                android:id="@+id/av_root_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <!--百度播放器-->
+            <com.baidu.cyberplayer.core.BVideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                />
+
+         <RelativeLayout
+             android:id="@+id/transparent_ly"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/transparent"
+             >
+
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/progress_ly"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             >
+             <ImageView
+                 android:id="@+id/progress_iv"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 />
+             <ProgressBar
+                 android:id="@+id/buffer_progress"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:indeterminate="false"
+                 android:visibility="gone"
+                 />
+
+         </RelativeLayout>
+
+     </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/screen_hv"
+        android:layout_width="@dimen/woying_20_dip"
+        android:layout_height="@dimen/woying_20_dip"
+        android:background="@drawable/enlarge_screen"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:layout_marginBottom="@dimen/woying_10_dip"
+        android:layout_alignBottom="@+id/live_ly"
+        android:layout_alignParentRight="true"
+        />
+
+    <include
+        android:id="@+id/in_top"
+        layout="@layout/live_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/live_ly"
+        >
+    </include>
+
+
+    <include
+        android:id="@+id/in_btm"
+        layout="@layout/live_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/live_ly"
+        >
+    </include>
+
+
+
+    <RelativeLayout
+        android:id="@+id/im_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/trans_half"
+        android:layout_above="@+id/in_btm"
+        >
+        <ListView
+            android:id="@+id/lv_msg_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/woying_120_dip"
+            android:layout_marginRight="@dimen/woying_200_dip"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:scrollbars="none"
+            android:groupIndicator="@null"
+            android:listSelector="@color/transparent"
+            android:scrollbarStyle="outsideOverlay"
+            android:transcriptMode="normal"
+
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/live_info_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_20_dip"
+        android:background="@color/bg_white"
+        android:layout_below="@+id/live_ly"
+        >
+
+        <TextView
+            android:id="@+id/live_sta_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/woying_10_dip"
+            android:textColor="@color/first_theme"
+            android:layout_centerVertical="true"
+            android:text="直播中"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            />
+
+        <TextView
+            android:id="@+id/live_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/woying_10_dip"
+            android:textColor="@color/font_gray"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/live_sta_tv"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:text="17:00-12:00"
+            />
+
+
+        <TextView
+            android:id="@+id/live_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/woying_10_dip"
+            android:textColor="@color/font_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/live_num_iv"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/woying_4_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:text="200"
+            />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/live_info_ly"
+        />
+
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray_f6"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/inputBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="@string/expression_choice_panel"
+                android:paddingLeft="@dimen/woying_8_dip"
+                android:paddingRight="@dimen/woying_8_dip"
+                android:src="@drawable/trans_im" />
+
+            <EditText
+                android:id="@+id/et_msg_input"
+                style="@style/font_normal_small"
+                android:layout_width="0dip"
+                android:layout_height="40dip"
+                android:layout_marginBottom="@dimen/woying_6_dip"
+                android:layout_marginTop="@dimen/woying_6_dip"
+                android:layout_weight="1"
+                android:background="@drawable/round_white"
+                android:imeOptions="flagNoExtractUi"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/woying_6_dip"
+                android:paddingRight="@dimen/woying_6_dip" />
+            <Button
+                android:id="@+id/btn_send_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/woying_8_dip"
+                android:paddingRight="@dimen/woying_8_dip"
+                android:text="@string/button_send"
+                android:textColor="@color/font_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+            <com.coder.kzxt.im.view.EmojiViewPage
+                android:id="@+id/viewPagerEmoji"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/background_light_gray"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+            </com.coder.kzxt.im.view.EmojiViewPage>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

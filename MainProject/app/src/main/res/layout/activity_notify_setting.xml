@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notify_setting_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    tools:context="com.coder.kzxt.setting.activity.NotifySettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <include layout="@layout/loading" />
+
+    <ScrollView
+        android:id="@+id/notify_setting_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/scroll_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/notify_setting_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_10_dip"
+                android:background="@color/bg_gray" />
+
+            <!-- 课程相关消息推送 -->
+            <RelativeLayout
+                android:id="@+id/course_notify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/course_notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/course_notify_send"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/course_notify_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <!-- 课程相关推送描述 -->
+            <RelativeLayout
+                android:id="@+id/course_notify_des_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray">
+
+                <TextView
+                    android:id="@+id/course_notify_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/woying_14_dip"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:layout_marginTop="@dimen/woying_7_dip"
+                    android:text="@string/course_notify_send_des"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+            </RelativeLayout>
+
+            <!-- 班级相关消息推送 -->
+            <RelativeLayout
+                android:id="@+id/class_notify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/class_notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/class_notify_send"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/class_notify_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <!-- 班级相关推送描述 -->
+            <RelativeLayout
+                android:id="@+id/class_notify_send_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray">
+
+                <TextView
+                    android:id="@+id/class_notify_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/woying_14_dip"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:layout_marginTop="@dimen/woying_7_dip"
+                    android:text="@string/class_notify_send_des"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+            </RelativeLayout>
+
+            <!-- 海报相关消息推送 -->
+            <RelativeLayout
+                android:id="@+id/poster_notify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/poster_notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/post_notify_send"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/poster_notify_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip" />
+            </RelativeLayout>
+
+            <!-- 海报相关消息推送描述 -->
+            <RelativeLayout
+                android:id="@+id/poster_notify_des_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray">
+
+                <TextView
+                    android:id="@+id/poster_notify_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/woying_14_dip"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:layout_marginTop="@dimen/woying_7_dip"
+                    android:text="@string/post_notify_send_des"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+            </RelativeLayout>
+
+            <!-- 签到通知推送 -->
+            <RelativeLayout
+                android:id="@+id/sign_notify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/sign_notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/shakesign_notify_send"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/sign_notify_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/iv_setting_line4_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_17_dip"
+                android:background="@color/bg_gray" />
+
+            <!-- 会话通知推送 -->
+            <RelativeLayout
+                android:id="@+id/conversation_notify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/conversation_notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/conversation_notify_send"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/conversation_notify_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/iv_setting_line5_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_17_dip"
+                android:background="@color/bg_gray" />
+
+            <!-- 夜间免打扰 -->
+            <RelativeLayout
+                android:id="@+id/night_notify_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/woying_45_dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/night_notify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:text="@string/night_notify_send"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/woying_14_dip" />
+
+                <Switch
+                    android:id="@+id/night_notify_switch"
+                    style="@style/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/woying_10_dip"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/night_notify_des_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray">
+
+                <TextView
+                    android:id="@+id/night_notify_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/woying_14_dip"
+                    android:layout_marginLeft="@dimen/woying_15_dip"
+                    android:layout_marginTop="@dimen/woying_7_dip"
+                    android:text="@string/night_notify_send_des"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_12_dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:text="@string/save"
+            android:textColor="@color/font_white"
+            android:textSize="16sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/class_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:id="@+id/tv_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/class_name"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/woying_70_dip"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入班级名称"
+            android:textColor="@color/create_class_color"
+            android:textColorHint="@color/create_class_color"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/organizational_structure_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_1_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:id="@+id/organizational_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organizational"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/organization_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_toLeftOf="@+id/iv_org_arrow"
+            android:text="请选择"
+            android:textColor="@color/create_class_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_org_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/department_go" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/enrollment_year_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enrol_year"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_enrollment_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_toLeftOf="@+id/iv_enro_arrow"
+            android:text="请选择"
+            android:textColor="@color/create_class_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_enro_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/department_go" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_limit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/woying_1_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_limit"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_add_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_toLeftOf="@+id/iv_limit_arrow"
+            android:textColor="@color/create_class_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_limit_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/department_go" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/class_icon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/woying_10_dip">
+
+        <TextView
+            android:id="@+id/tv_class_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/class_icon"
+            android:textColor="@color/oder_user_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_class_icon"
+            android:layout_width="@dimen/woying_40_dip"
+            android:layout_height="@dimen/woying_40_dip"
+            android:layout_toLeftOf="@+id/iv_icon_arrow"
+            android:src="@drawable/class_cirlce_comment_icon" />
+
+        <ImageView
+            android:id="@+id/iv_icon_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/department_go" />
+    </RelativeLayout>
+
+</LinearLayout>

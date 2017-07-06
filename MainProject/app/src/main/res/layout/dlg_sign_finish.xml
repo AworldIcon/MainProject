@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/woying_250_dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_36_dip"
+            android:background="@drawable/round_main_top"
+            android:gravity="center"
+            android:text="点名结束"
+            android:textColor="@color/white"
+            android:textSize="@dimen/woying_14_dip"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_90_dip"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/totalNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/woying_20_dip"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+
+            <View
+                style="@style/grayVerticalLine"
+                android:layout_marginBottom="@dimen/woying_20_dip"
+                android:layout_marginTop="@dimen/woying_20_dip"/>
+
+            <TextView
+                android:id="@+id/signedNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/woying_20_dip"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+
+            <View
+                style="@style/grayVerticalLine"
+                android:layout_marginBottom="@dimen/woying_20_dip"
+                android:layout_marginTop="@dimen/woying_20_dip"/>
+
+            <TextView
+                android:id="@+id/unSignNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/woying_20_dip"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line"/>
+
+
+        <LinearLayout
+            android:id="@+id/bottomLy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_dialog_bottom_height"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/cancel"
+                android:textColor="@color/first_theme"
+                android:textSize="@dimen/font_normal"/>
+
+            <View
+                android:id="@+id/grayLine"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line"/>
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/sign_detail"
+                android:textColor="@color/first_theme"
+                android:textSize="@dimen/font_normal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

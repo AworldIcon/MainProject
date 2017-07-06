@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/woying_10_dip"
+              android:background="@drawable/ripple_orange"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/font_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/woying_10_dip"
+        android:layout_gravity="center_horizontal"/>
+
+    <View
+        style="@style/grayHorizontallLine"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/woying_10_dip"
+            android:paddingTop="@dimen/woying_10_dip"
+            android:text="@string/signed"/>
+
+        <TextView
+            android:id="@+id/signed"
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/woying_10_dip"
+            android:paddingTop="@dimen/woying_10_dip"
+            android:text="@string/signed"
+            android:textColor="@color/first_theme"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressbar_signed"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_below="@+id/signed"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_marginTop="4dp"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/main_progress_style"/>
+
+        <TextView
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressbar_signed"
+            android:paddingLeft="@dimen/woying_10_dip"
+            android:paddingTop="@dimen/woying_10_dip"
+            android:text="@string/signed_not"/>
+
+        <TextView
+            android:id="@+id/un_sign"
+            style="@style/font_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/progressbar_signed"
+            android:paddingRight="@dimen/woying_10_dip"
+            android:paddingTop="@dimen/woying_10_dip"
+            android:text="@string/signed_not"
+            android:textColor="@color/first_theme"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressbar_unsign"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/un_sign"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_marginTop="4dp"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/main_progress_style"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/grayHorizontallLine"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        />
+
+    <include
+        layout="@layout/view_sign_list"/>
+
+    <ImageView
+        android:id="@+id/down_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/woying_10_dip"
+        android:src="@drawable/sign_arrow_down"/>
+
+</LinearLayout>

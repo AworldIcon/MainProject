@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:paddingBottom="16dip">
+
+    <include layout="@layout/view_main_module_title" />
+
+    <View
+        android:id="@+id/whiteLine"
+        android:layout_width="match_parent"
+        android:layout_height="14dip"
+        android:background="@color/white"
+        android:visibility="gone"/>
+
+    <com.coder.kzxt.views.MyGridView
+        android:id="@+id/myGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@color/transparent"
+        android:columnWidth="64dip"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:background="@color/bg_white"
+        android:gravity="center_horizontal"
+        android:groupIndicator="@null"
+        android:numColumns="5"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:stretchMode="spacingWidth" />
+
+
+</LinearLayout>

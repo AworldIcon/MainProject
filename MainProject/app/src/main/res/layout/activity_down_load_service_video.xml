@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_down_load_service_video"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.download.DownloadServiceVideoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+    <RelativeLayout
+        android:id="@+id/all_operation_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/woying_40_dip"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/bg_gray"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/all_begin_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/all_begin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:text="@string/all_begin"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/all_pause_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/all_pause" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:text="@string/all_pause"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_fenge"
+        android:layout_below="@+id/all_operation_ly"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent" />
+
+    <View
+        android:id="@+id/bottom_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/selection_menu"
+        android:background="@color/gray_line"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/selection_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_44_dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/selection_all"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/select_all"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_16_dip" />
+
+        <View
+            android:id="@+id/fenges"
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_line" />
+
+        <Button
+            android:id="@+id/selection_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/delete"
+            android:textColor="@color/first_theme"
+            android:textSize="@dimen/woying_16_dip" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:background="@color/bg_white"
+    >
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search_gray"
+        android:drawablePadding="@dimen/woying_4_dip"
+        android:padding="@dimen/woying_10_dip"
+        android:text="@string/search_more"
+        android:textColor="@color/font_gray"
+        android:visibility="gone"
+        android:drawableRight="@drawable/browser_dilan_go_down"/>
+
+</LinearLayout>

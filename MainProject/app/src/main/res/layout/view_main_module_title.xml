@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleLy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/woying_14_dip">
+
+    <View
+        android:layout_width="@dimen/woying_4_dip"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/woying_14_dip"
+        android:layout_marginTop="@dimen/woying_14_dip"
+        android:background="@color/first_theme" />
+
+    <TextView
+        android:id="@+id/moduleTitle"
+        style="@style/font_normal_single"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_6_dip"
+        android:paddingBottom="@dimen/woying_14_dip"
+        android:paddingRight="@dimen/woying_10_dip"
+        android:paddingTop="@dimen/woying_14_dip"
+        android:layout_weight="1"
+        android:text="直播课" />
+
+    <TextView
+        android:id="@+id/loadMore"
+        android:textSize="@dimen/woying_12_dip"
+        android:textColor="@color/font_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/woying_14_dip"
+        android:text="@string/more_jiantou"
+        />
+
+</LinearLayout>

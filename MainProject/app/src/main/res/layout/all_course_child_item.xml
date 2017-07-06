@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/child_ly"
+        android:layout_width="match_parent"
+        android:layout_height="42dip">
+
+        <TextView
+            android:id="@+id/child_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/child_img"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/mobile_develop"
+            android:textColor="@color/font_black"
+            android:textSize="14dip" />
+
+        <ImageView
+            android:id="@+id/child_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+    <!--<com.coder.kzxt.views.MyGridView-->
+        <!--android:id="@+id/child_gridview"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/child_ly"-->
+        <!--android:layout_marginLeft="18dip"-->
+        <!--android:layout_marginRight="10dip"-->
+        <!--android:cacheColorHint="@color/transparent"-->
+        <!--android:divider="@null"-->
+        <!--android:groupIndicator="@null"-->
+        <!--android:horizontalSpacing="10dip"-->
+        <!--android:listSelector="@color/transparent"-->
+        <!--android:numColumns="3"-->
+        <!--android:paddingBottom="14dip"-->
+        <!--android:paddingTop="6dip"-->
+        <!--android:scrollbars="none"-->
+        <!--android:verticalSpacing="10dip"-->
+        <!--android:visibility="gone" />-->
+
+</RelativeLayout>

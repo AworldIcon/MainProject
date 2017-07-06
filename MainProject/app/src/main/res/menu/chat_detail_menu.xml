@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_all"
+        android:icon="@drawable/chat_change_class"
+        app:showAsAction="always"
+        android:title="@string/all"
+        tools:ignore="AlwaysShowAction"/>
+    <!--<item-->
+        <!--android:id="@+id/menu_function"-->
+        <!--android:icon="@drawable/chat_function"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="@string/search"/>-->
+    <item
+        android:id="@+id/menu_member"
+        android:icon="@drawable/chat_member"
+        app:showAsAction="always"
+        android:title="@string/poseter_publish"/>
+
+</menu>

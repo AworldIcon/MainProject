@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/woying_10_dip"
+        android:layout_marginTop="@dimen/woying_10_dip"
+        >
+        <ImageView
+            android:id="@+id/user_head_iv"
+            android:layout_width="@dimen/woying_40_dip"
+            android:layout_height="@dimen/woying_40_dip"
+            android:src="@drawable/user_head_bg"
+            />
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/user_head_iv"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="@dimen/woying_10_dip"
+              android:layout_marginRight="@dimen/woying_10_dip"
+              android:layout_marginTop="@dimen/woying_10_dip"
+              >
+
+              <TextView
+                  android:id="@+id/nike_name_tv"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/woying_12_dip"
+                  android:textColor="@color/font_question_blue"
+                  />
+
+               <TextView
+                   android:id="@+id/time_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/woying_10_dip"
+                   android:textColor="@color/font_gray"
+                   android:layout_below="@+id/nike_name_tv"
+                   />
+
+              <RatingBar
+                  android:id="@+id/com_rat"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  style="@style/roomRatingBar"
+                  android:rating="4"
+                  android:layout_alignParentRight="true"
+                  />
+
+
+              <com.ms.square.android.expandabletextview.ExpandableTextView
+                  android:id="@+id/content_tx"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  expandableTextView:maxCollapsedLines="2"
+                  android:layout_marginTop="@dimen/woying_10_dip"
+                  android:layout_below="@+id/time_tv"
+                  >
+                  <TextView
+                      android:id="@id/expandable_text"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:textSize="@dimen/woying_12_dip"
+                      android:ellipsize="end"
+                      android:textColor="@color/font_black"
+                      />
+                  <ImageButton
+                      android:id="@id/expand_collapse"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:padding="16dp"
+                      android:layout_gravity="right|bottom"
+                      android:background="@android:color/transparent"/>
+              </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+          </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

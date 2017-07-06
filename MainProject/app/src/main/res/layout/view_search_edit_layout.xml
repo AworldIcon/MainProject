@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                android:id="@+id/searchLy"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/woying_40_dip"
+                android:background="@color/first_theme">
+
+    <ImageView
+        android:id="@+id/leftImage"
+        android:layout_width="@dimen/woying_50_dip"
+        android:layout_height="@dimen/woying_44_dip"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/back_up"/>
+
+    <TextView
+        android:id="@+id/searchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/woying_10_dip"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/woying_12_dip"/>
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/woying_30_dip"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/searchText"
+        android:layout_toRightOf="@+id/leftImage"
+        android:background="@drawable/round_white_360"
+        android:drawableLeft="@drawable/search_gray"
+        android:drawablePadding="@dimen/woying_4_dip"
+        android:gravity="center_vertical"
+        android:hint="@string/input_search_content"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/woying_4_dip"
+        android:paddingLeft="@dimen/woying_8_dip"
+        android:paddingRight="@dimen/woying_8_dip"
+        android:paddingTop="@dimen/woying_4_dip"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/woying_12_dip"
+        android:visibility="visible"/>
+</RelativeLayout>

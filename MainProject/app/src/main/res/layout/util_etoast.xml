@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/mbContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:layout_marginBottom="50dp"
+    android:gravity="bottom|center">
+    <LinearLayout
+        android:id="@+id/toast_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/etoast_bg_shape"
+        android:gravity="bottom|center"
+        android:padding="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mbMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/font_white"
+            android:shadowRadius="2.75"/>
+    </LinearLayout>
+</LinearLayout>

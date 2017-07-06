@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_marginTop="@dimen/woying_5_dip"
+                android:background="@drawable/ripple_orange">
+
+    <LinearLayout
+        android:id="@+id/zong_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/woying_6_dip">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_5_dip"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/user_head_img"
+                android:layout_width="@dimen/woying_40_dip"
+                android:layout_height="@dimen/woying_40_dip"
+                android:layout_marginTop="@dimen/woying_6_dip"
+                android:src="@drawable/default_teacher_header"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:layout_marginTop="@dimen/woying_7_dip"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_name_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:text="12345"
+                    android:textColor="@color/font_question_blue"
+                    android:textSize="@dimen/woying_13_dip"/>
+
+                <TextView
+                    android:id="@+id/publish_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/woying_6_dip"
+                    android:background="@drawable/round_empty"
+                    android:text="发布于"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/woying_10_dip"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/woying_6_dip"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/elite_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/woying_3_dip"
+                android:layout_marginTop="@dimen/woying_3_dip"
+                android:src="@drawable/elite_question_image"/>
+
+            <TextView
+                android:id="@+id/question_content_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="123131313"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/woying_14_dip"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/imgs_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_80_dip"
+            android:layout_marginBottom="@dimen/woying_6_dip"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/question_one_img_iv"
+                android:layout_width="@dimen/woying_95_dip"
+                android:layout_height="@dimen/woying_80_dip"
+                android:layout_marginTop="@dimen/woying_4_dip"
+                 android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/question_two_img_iv"
+                android:layout_width="@dimen/woying_95_dip"
+                android:layout_height="@dimen/woying_80_dip"
+                android:layout_marginLeft="@dimen/woying_7_dip"
+                android:layout_marginTop="@dimen/woying_4_dip"
+                 android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/question_tr_img_iv"
+                android:layout_width="@dimen/woying_95_dip"
+                android:layout_height="@dimen/woying_80_dip"
+                android:layout_marginLeft="@dimen/woying_7_dip"
+                android:layout_marginTop="@dimen/woying_4_dip"
+                 android:scaleType="centerCrop"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/woying_1_dip"
+            android:background="@color/bg_gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/woying_10_dip"
+            android:layout_marginTop="@dimen/woying_6_dip"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/woying_12_dip"
+                android:layout_height="@dimen/woying_10_dip"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_4_dip"
+                android:layout_toLeftOf="@+id/question_reply_num_tx"
+                android:src="@drawable/classtopic_particulars_img"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/question_reply_num_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_11_dip"
+                android:layout_toLeftOf="@+id/image"
+                android:drawableLeft="@drawable/classtopic_particulars_img"
+                android:drawablePadding="@dimen/woying_4_dip"
+                android:gravity="center_vertical"
+                android:text="300"
+                android:textColor="@color/font_dark_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_4_dip"
+                android:layout_toLeftOf="@+id/question_look_num"
+                android:src="@drawable/questions_unsolve"
+                />
+
+            <TextView
+                android:id="@+id/question_look_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/woying_2_dip"
+                android:text="1560"
+                android:textColor="@color/font_dark_gray"
+                android:textSize="@dimen/woying_12_dip"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/status_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/unsolve_image"
+        />
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_video_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.video.activity.VideoViewActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/video_parent_view"
+        >
+
+        <RelativeLayout
+            android:id="@+id/video_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_height"
+            android:layout_gravity="top"
+            >
+            <RelativeLayout
+                android:id="@+id/view_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/lockImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/woying_10_dip"
+                android:clickable="true"
+                android:src="@drawable/unlocked"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/selectImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/woying_6_dip"
+                android:clickable="true"
+                android:src="@drawable/select_episode_img"
+                android:visibility="gone"
+                />
+
+            <com.coder.kzxt.video.activity.SimpleMediaController
+                android:id="@+id/media_controller_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                />
+
+             <RelativeLayout
+                android:id="@+id/selects_layout"
+                android:layout_width="@dimen/woying_240_dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/trans_eight"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/selects_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/woying_4_dip"
+                    android:scrollbars="none"
+                    android:background="@color/transparent"
+                    android:listSelector="@color/transparent"
+                    android:divider="@color/transparent"
+                    >
+
+                </ListView>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/buffer_bj"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ProgressBar
+                android:id="@+id/loading_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/paly_img"
+                android:layout_width="@dimen/woying_40_dip"
+                android:layout_height="@dimen/woying_40_dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/video_big_play"
+                />
+
+             <include layout="@layout/video_gesture"></include>
+             <include layout="@layout/video_volume"></include>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/function_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_function_view"
+            android:background="@color/bg_white"
+            android:layout_gravity="bottom"
+            >
+
+            <com.coder.kzxt.recyclerview.MyRecyclerView
+                android:id="@+id/myRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManagerType="linear_horizontal"
+                android:layout_centerVertical="true"
+                app:divider_decoration_color="@color/transparent"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_top_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_ly_height"
+        android:orientation="horizontal"
+        android:background="@color/transparent"
+        >
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_8_dip"
+            android:src="@drawable/video_back"
+            android:padding="@dimen/woying_4_dip"
+            android:background="@color/transparent"
+            />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/woying_4_dip"
+            android:layout_marginRight="@dimen/woying_4_dip"
+            android:layout_toLeftOf="@+id/download_iv"
+            android:layout_toRightOf="@+id/img_back"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/font_white"
+            android:textSize="@dimen/woying_12_dip" />
+
+
+        <ImageButton
+            android:id="@+id/download_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/woying_8_dip"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:src="@drawable/video_download"
+            android:padding="@dimen/woying_4_dip"
+            android:background="@color/transparent"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/join_tip_ly"
+        android:layout_width="@dimen/woying_160_dip"
+        android:layout_height="@dimen/woying_80_dip"
+        android:background="@drawable/round_theme"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remind_join"
+            android:drawableTop="@drawable/join_tip"
+            android:textColor="@color/font_white"
+            android:textSize="@dimen/woying_12_dip"
+            android:drawablePadding="@dimen/woying_10_dip"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

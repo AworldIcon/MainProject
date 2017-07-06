@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/woying_30_dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_testpage_title" />
+
+            <com.coder.kzxt.views.MyListView
+                android:id="@+id/selectList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:groupIndicator="@null"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/answer_Ly"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip">
+
+                    <TextView
+                        android:id="@+id/yourAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_black"
+                        android:textSize="14dip" />
+
+                    <ImageView
+                        android:id="@+id/errorLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/yourAnswer"
+                        android:layout_alignRight="@+id/yourAnswer"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/red_line"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/correctAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yourAnswer"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/font_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/analysis_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/analysis_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/round_theme"
+                    android:paddingBottom="1dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="1dip"
+                    android:text="@string/analysis"
+                    android:textColor="@color/white"
+                    android:textSize="14dip" />
+
+                <com.coder.kzxt.views.MyListView
+                    android:id="@+id/analysis_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/finishTesT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/test_finish"
+        android:gravity="center"
+        android:paddingTop="4dip"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="14dip" />
+
+</LinearLayout>

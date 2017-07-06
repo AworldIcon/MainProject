@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="@dimen/woying_280_dip"
+        android:layout_height="@dimen/woying_280_dip"
+        android:layout_margin="@dimen/woying_20_dip"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/cut_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+           />
+        <TextView
+            android:id="@+id/close_ad"
+            android:layout_width="@dimen/woying_60_dip"
+            android:layout_height="@dimen/woying_30_dip"
+            android:layout_marginTop="@dimen/woying_16_dip"
+            android:layout_marginRight="@dimen/woying_16_dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/wel_ad_corner_bg"
+            android:gravity="center"
+            android:text="@string/btn_close"
+            android:textColor="@color/font_white"
+            android:textSize="@dimen/woying_14_dip"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:paddingBottom="16dip">
+    <!--普通的2个并排-->
+
+   <include
+       layout="@layout/view_main_module_title"/>
+
+
+    <com.coder.kzxt.views.MyGridView
+        android:id="@+id/myGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:childDivider="@color/transparent"
+        android:divider="@null"
+        android:numColumns="2"
+        android:fadingEdge="none"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+         />
+
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+    android:id="@+id/myPullSwipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.coder.kzxt.recyclerview.MyPullRecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.coder.kzxt.recyclerview.MyPullRecyclerView>
+</com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+    <include layout="@layout/loading"/>
+    <include layout="@layout/empty_view"/>
+    <include layout="@layout/load_fail"/>
+</RelativeLayout>

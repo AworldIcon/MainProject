@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.zxing.view.QrCodeFinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+    <com.google.zxing.view.QrCodeFinderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_identify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/woying_80_dip"
+        android:layout_marginTop="@dimen/woying_50_dip"
+        android:background="@drawable/round_gray_scan_qcode"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/woying_10_dip"
+        android:paddingLeft="@dimen/woying_20_dip"
+        android:paddingRight="@dimen/woying_20_dip"
+        android:paddingTop="@dimen/woying_10_dip">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/woying_15_dip"
+            android:layout_height="@dimen/woying_15_dip"
+            android:layout_gravity="center_vertical|left"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/scan_identify_progressbar"
+            android:indeterminateOnly="true"/>
+
+        <TextView
+            android:id="@+id/tv_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/woying_10_dip"
+            android:layout_toRightOf="@+id/progress"
+            android:text="@string/start_identify"
+            android:textColor="@color/font_identify_qcode"
+            android:textSize="@dimen/woying_12_dip"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/photo_pic"
+        android:layout_width="@dimen/woying_32_dip"
+        android:layout_height="@dimen/woying_32_dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/woying_30_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:background="@drawable/iv_photo_pic"/>
+
+    <include
+        layout="@layout/scan_class_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/qr_code_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+</RelativeLayout>
+

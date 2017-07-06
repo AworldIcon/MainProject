@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coder.kzxt.views.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_question_reply_details"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder.kzxt.question.activity.QuestionReplyDetailsActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:navigationIcon="@drawable/back_up"
+        app:navigationIcon="@drawable/back_up"
+        app:popupTheme="@style/OverflowMenuStyle"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />
+
+
+    <com.coder.kzxt.recyclerview.MyPullSwipeRefresh
+        android:id="@+id/myPullSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/woying_50_dip"
+        android:layout_below="@id/toolbar">
+
+        <com.coder.kzxt.recyclerview.MyPullRecyclerView
+            android:id="@+id/myPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            app:layoutManagerType="linear_vertical"
+            />
+    </com.coder.kzxt.recyclerview.MyPullSwipeRefresh>
+    <ImageView
+        android:id="@+id/reply_question"
+        android:layout_width="@dimen/woying_50_dip"
+        android:layout_height="@dimen/woying_50_dip"
+        android:src="@drawable/question_reply_image"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/woying_30_dip"
+        android:layout_marginRight="@dimen/woying_10_dip"
+        android:visibility="gone"
+        />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/load_fail" />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/empty_view" />
+    <RelativeLayout
+        android:id="@+id/reply_post_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/chat_info_ly"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/woying_44_dip">
+
+            <com.coder.kzxt.buildwork.views.ContainsEmojiEditText
+                android:id="@+id/reply_write_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/woying_42_dip"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/woying_2_dip"
+                android:layout_marginLeft="@dimen/woying_8_dip"
+                android:layout_marginRight="@dimen/woying_6_dip"
+                android:layout_marginTop="@dimen/woying_6_dip"
+                android:layout_toLeftOf="@+id/reply_post_button"
+                android:background="@color/bg_light_gray"
+                android:textColor="@color/font_gray"
+                android:maxLength="1000"
+                android:textSize="@dimen/woying_12_dip" />
+
+            <TextView
+                android:id="@+id/reply_post_button"
+                android:layout_width="@dimen/woying_60_dip"
+                android:layout_height="@dimen/woying_30_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/woying_6_dip"
+                android:background="@drawable/round_huang3_loginsetting"
+                android:gravity="center"
+                android:text="@string/button_send"
+                android:textColor="@color/white"
+                android:textSize="@dimen/woying_14_dip" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.coder.kzxt.views.ResizeLayout>
